@@ -1,0 +1,207 @@
+*{
+    box-sizing:content-box;
+    background: local;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+
+}
+
+.dektop{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body{
+    font-family: "Libre Baskerville", serif;
+    color:  rgb(0, 0, 0);
+    font-style: italic;
+    background-color:rgb(245, 245, 245)
+
+}
+
+.primeraparte{
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+.botoneshome{
+    margin-top: -80px;
+    padding: 0;
+    border: 5px;
+    position:static;
+
+}
+
+.botoneshome a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        padding: 0 0 ;
+        border: 0;
+        font-size: 30px;
+}
+
+.botoneshome a:hover{
+    color:  rgb(240, 138, 2);
+    padding: 2px;
+}
+
+.logo{
+    background-color: transparent;
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 60px;
+    margin-top: 0px;
+    margin-left: 2%;
+    padding-left: 15px ;
+    font-size: 30px;
+    margin-right: 5%;
+    padding-right: 15px;
+}
+ul {
+    padding-left: 60px;
+    list-style-type: circle;
+}
+
+ul li {
+    padding-left: 10px;
+    background-image: url(star.svg);
+    background-position: 0 0;
+    background-size: 1.6rem 1.6rem;
+    background-repeat: no-repeat;
+    color:  rgb(240, 138, 2);
+  }
+
+/* --------------------------------------------------------PRIMERA PRATE ----------------------------------------------------------- */
+.parte1{
+    background: linear-gradient(rgb(105, 25, 47),rgb(240, 138, 2));
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    background-position: cover;
+    background-color: transparent;
+    background-size:cover;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    margin-top: -20px;
+}
+
+
+.gps{
+    background-color: rgb(255, 255, 255);
+}
+/* ---------------------------------------------------------segunda parte =------------------------------------------------------------- */
+
+.contactos{
+    background-color: rgb(245, 245, 245);
+    display: grid;
+    width: 100%;
+    text-align: left;
+    
+    
+}
+
+textarea{
+    margin-top: 8px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+
+}
+
+input{
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    margin-top: 8px;
+    color: rgb(0, 0, 0);
+    border: 30px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.address{
+    grid-area: cover;
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.datos{
+    margin-top: 30px;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+
+/*-------------------------------------------BIBLIOGRAFIA ---------------------------------------------------*/
+.bibliografia{
+    background: linear-gradient(rgb(240, 138, 2),rgb(105, 25, 47));
+    background-position: cover;
+    background-size:cover;
+    background-color: transparent;
+    display: grid;
+    font-size: medium;
+    color: white;
+}
+
+.logobibliografia{
+    grid-column: 1;
+    margin-left: 2%;
+    width: 100%   ;
+    display: grid;
+    width: 150px;
+    margin-bottom: 60px;
+    margin-top: 0px;
+    margin-left: 2%;
+    padding-left: 15px ;
+    font-size: 30px;
+    margin-right: 5%;
+    padding-right: 15px;
+
+}
+
+.divsinistra{
+    display: inline;
+    grid-column: 2;
+    margin-top: 30px;
+    font-size: medium;
+    margin-left: -15px;
+    width: 100%;
+    margin-right: -30px;
+
+}
+
+.divcentro{
+    grid-column: 3;
+    margin-right: -30px;
+    margin-top: 30px;
+    margin-left: 20px;
+    display: inline;
+}
+
+.divdestra{
+    grid-column: 4;
+    margin-right: -30px;
+    margin-left: 60px;
+    text-align: left;
+    margin-top: 68px;
+
+}
+
+.destradestra{
+    grid-column: 5;
+    text-align: right;
+    margin-top: 30px;
+    margin-right: 30px;
+    font-size: 35px;
+}

@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --verde-principal: #9acd32;
+  --verde-secundario: #2e7d32;
+  --gris-claro: #f4f4f4;
+  --negro: #222;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: var(--negro);
+}
+
+.div-opciones {
+  display: inline-flex;
+  width: 100%;
+}
+
+.div-opciones ul {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+}
+
+.puntos-lado1 {
+  padding: 0 0 0 70px;
+  margin: 0;
+  width: 45%;
+  position: relative;
+}
+
+.puntos-lado1 li {
+  list-style: disc inside;
+}
+
+.puntos-lado1 p {
+  margin: 5px 0 10px 0;
+  width: 90%;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+.div-opciones li {
+  list-style: none;
+  margin-top: 40px;
+  word-wrap: break-word;
+}
+
+.dussichsecurity {
+  color: rgb(244, 136, 0) !important;
+  background-color: rgb(108, 26, 49);
+}
+
+li a {
+  text-decoration: none;
+  color: var(--verde-principal);
+  font-weight: bold;
+  font-size: 22px;
+  background-color: rgba(21, 199, 83, 0.2);
+  border-radius: 20px;
+  padding: 10px 25px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+li a:hover {
+  background-color: var(--verde-secundario);
+  color: #fff;
+}
+
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.6);
+}
+
+.contenido {
+  all: unset;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  top: 25%;
+  line-height: 30px;
+  font-size: 260%;
+}
+/* -------------------- SECCIÓN TÍTULO -------------------- */
+.parrafo1 {
+  background: linear-gradient(var(--verde-principal), var(--verde-secundario));
+  color: white;
+  text-align: center;
+}
+
+h1.parrafo {
+  margin-top: 20px;
+  font-size: 300%;
+  margin-bottom: 0;
+}
+
+p.parrafo {
+  margin-bottom: 20px;
+  font-size: 200%;
+  font-weight: 200;
+  margin-top: 0;
+}
+
+
+/* PRODUCTOS / MOTORES */
+.c400, .s800H, .c770N, .s450H, .g-bat {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  
+  width: 100%;
+}
+
+.s800H, .c884, .s450H {
+  flex-direction: row-reverse;
+}
+
+.puntos-lado {
+  width: 50%;
+  margin-left: 10px;
+}
+
+.puntos-lado li {
+  margin-left: 30px;
+  width: 75%;
+  line-height: 35px;
+}
+
+.puntos-lado p {
+  margin: 5px 0 10px 0;
+  width: 90%;
+}
+
+/* LÍNEAS DE INFO */
+.linea-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  width: 80%;
+  padding: 20px;
+}
+
+.etiqueta {
+  font-weight: bold;
+}
+
+.valor {
+  text-align: right;
+}
+
+.linea-orizontal {
+  width: 95%;
+  height: 2px;
+  background-color: #ccc;
+  margin: 60px 40px;
+}
+
+/* BOTONES */
+.Boton {
+  padding: 15px 30px;
+  background-color: var(--verde-principal);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--verde-secundario);
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.Boton:hover {
+  background-color: var(--verde-secundario);
+  color: var(--verde-principal);
+}
+
+/* BIBLIOGRAFÍA / PIE DE PÁGINA */
+.bibliografia {
+  background: linear-gradient(var(--verde-secundario), var(--verde-principal));
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 60px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logobibliografia {
+  flex: 1 1 150px;
+  max-width: 150px;
+}
+
+.divsinistra,
+.divcentro,
+.divdestra,
+.destradestra {
+  flex: 1 1 200px;
+  min-width: 180px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.divdestra {
+  text-align: left;
+}
+
+.destradestra {
+  text-align: right;
+  font-size: 24px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .div-opciones {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  li a {
+    font-size: 18px;
+    padding: 8px 20px;
+  }
+
+  .contenido {
+    font-size: 140%;
+    top: 25%;
+  }
+
+  h1.parrafo {
+    font-size: 220%;
+  }
+
+  p.parrafo {
+    font-size: 150%;
+  }
+
+  .puntos-lado, .puntos-lado li,
+  .linea-info {
+    width: 90%;
+  }
+
+  .c721, .c741, .c844, .c851, .c884 {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .bibliografia {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .divsinistra, .divcentro, .divdestra, .destradestra {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .div-opciones {
+    flex-direction: column;
+  }
+
+  li a {
+    font-size: 16px;
+    padding: 6px 16px;
+  }
+
+  .contenido {
+    font-size: 120%;
+    top: 20%;
+  }
+
+  h1.parrafo {
+    font-size: 180%;
+  }
+
+  p.parrafo {
+    font-size: 120%;
+  }
+
+  .Boton {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .linea-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .valor {
+    text-align: left;
+  }
+
+  img {
+    width: 90% !important;
+    height: auto !important;
+  }
+}
+
+/* CARRUSEL DE IMÁGENES */
+.carrusel-container {
+  position: relative;
+  padding: 20px 50px;
+  box-shadow: 0 0 0px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 50%;
+}
+
+.carrusel {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.carrusel::-webkit-scrollbar {
+  height: 8px;
+}
+.carrusel::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 4px;
+}
+
+.imagen-carrusel {
+  flex: 0 0 auto;
+  width: 30%;
+  height: 320px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.imagen-carrusel:hover {
+  transform: scale(1.05);
+}
+
+.flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.9);
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  user-select: none;
+  z-index: 20;
+}
+.flecha:hover {
+  background: #eee;
+}
+.flecha-izquierda { left: 5px; }
+.flecha-derecha { right: 5px; }
+
+/* MODAL DE IMÁGENES */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal.active { display: flex; }
+
+.modal-content {
+  position: relative;
+  max-width: 60vw;
+  max-height: 80vh;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+.modal-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  z-index: 1010;
+}
+.modal-close:hover { color: #000; }
+.modal-flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.9);
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  padding: 12px 18px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  user-select: none;
+  z-index: 1010;
+  transition: background 0.3s ease;
+}
+.modal-flecha:hover { background: #eee; }
+.modal-flecha.left { left: 10px; }
+.modal-flecha.right { right: 10px; }
+
+@media (max-width: 600px) {
+  .imagen-carrusel {
+    width: 140px;
+    height: 100px;
+  }
+  .modal-content {
+    max-width: 90vw;
+    max-height: 70vh;
+  }
+}
+
+.simbolito {
+  padding: 10px 20px;
+  background-color: black;
+}
+
+.div-scroll {
+  display: inline-flex;
+  margin-top: 3%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+}
+
+.informacion-motor {
+     margin-top: 5%;
+    display: inline-flex;
+    text-align: start;
+    width: 90%;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  gap:9% ;
+}
+.informacion-motor h1 {
+  width: 40%;
+  margin: 0px;
+  font-size: x-large;
+}
+
+.informacion-motor2 {
+  display: block;
+  text-align: start;
+  width: 70%;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0px;
+  font-size: large;
+}
+
+.Boton-pro {
+  padding: 15px 30px;
+  background-color: var(--verde-principal);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--verde-secundario);
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.Boton-pro:hover {
+  background-color: var(--verde-secundario);
+  color: var(--verde-principal);
+}
+
+.div-infoMotor {
+  display: flex;
+  flex-direction: row;
+  padding: 40px 0% 40px 0%;
+  gap: 15%;
+  height: 80vh;
+  width: 100%;
+  margin-top: 0%;
+}
+
+.div-infoMotor li {
+  list-style: none;
+}
+
+.div-infoMotor li::before {
+  content: "✔";
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* Parte izquierda fija */
+.div-info {
+  flex: 1 1 30%;
+  position: sticky;
+  top: 40px;
+  align-self: flex-start;
+  height: fit-content;
+  width: 100%;
+  margin-left: 5%;
+}
+
+/* Parte derecha con scroll */
+.contenedor-scroll {
+  flex: 1 1 65%;
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 10px;
+  scroll-behavior: smooth;
+}
+
+/* Estilos de los detalles */
+.div-infoDetalles, .div-infoDetalles2 {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  width: 80%;
+  text-align: start;
+}
+
+.div-infoDetalles ul {
+  padding: 0px;
+}
+
+.div-infoDetalles2 ul {
+  padding: 0px;
+}
+
+.linea-orizontalM {
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  margin: 60px 0px;
+}
+
+/* Botones */
+.boton-switch {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+.boton-switch.active {
+  background-color: #4caf50;
+  color: white;
+}

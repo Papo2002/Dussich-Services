@@ -1,0 +1,165 @@
+/* Fuente moderna */
+
+/*
+hay que reducir el tama;o del label para pantallas mas peque;as y que disminuya proporcionalemnte. los div en generela. si estan en 100%, bajarlos 85%, 80 o 70%.
+
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --verde-principal: #9acd32;
+  --verde-secundario: #2e7d32;
+  --gris-claro: #f4f4f4;
+  --negro: #222;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: var(--negro);
+}
+
+.div-opciones {
+  display: inline-flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  overflow-wrap: break-word;
+  gap: 1px;
+  flex-direction: row;
+
+}
+
+.puntos-lado1 {
+    padding: 0;
+    margin: 0;
+  width: 45%;
+  position: relative;
+    padding-left: 70px;
+    
+    
+}
+
+.puntos-lado1 li {
+     list-style: disc inside;
+     
+
+}
+
+.puntos-lado1 p {
+  margin: 5px 0 10px 0;
+  width: 90%;
+}
+
+
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+li {
+  list-style: none;
+  margin-top: 40px;
+  word-wrap: break-word;
+  
+}
+
+.dussichsecurity {
+  color: rgb(244, 136, 0) !important;
+  background-color: rgb(108, 26, 49);
+}
+
+li a {
+  text-decoration: none;
+  color: var(--verde-principal);
+  font-weight: bold;
+  font-size: 22px;
+  background-color: rgba(21, 199, 83, 0.2);
+  border-radius: 20px;
+  padding: 10px 25px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+li a:hover {
+  background-color: var(--verde-secundario);
+  color: white;
+}
+
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.6);
+}
+
+.contenido {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  top: 30%;
+  font-size: 170%;
+  line-height: 30px;
+  
+}
+
+.contenido p{
+  font-size: 180%;
+}
+
+.div-PrimeraParte {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(196, 32, 32);
+  text-align: center;
+  padding: 20px;
+}
+
+.parrafo1 {
+  background: linear-gradient(var(--verde-principal), var(--verde-secundario));
+  color: white;
+  background-size: cover;
+  text-align: center;
+}
+
+h1.parrafo {
+  margin-top: 20px;
+  font-size: 300%;
+  margin-bottom: 0px;
+}
+
+p.parrafo {
+  margin-bottom: 20px;
+  font-size: 200%;
+  font-weight: 200;
+  margin-top: 0;
+}
+
+.descripcion {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 90%;
+    font-size: large;
+    padding: 5% 0;
+    align-items: stretch;
+    flex-direction: row;
+    margin: 0px 30px;
+}
