@@ -1,192 +1,99 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Carrusel centrado fijo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    .menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  z-index: 1001;
+  cursor: pointer;
+}
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background: #f0f0f0;
-    }
+/* Estilo lateral izquierdo */
+.div-opciones {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 250px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-top: 60px;
+  transition: left 0.4s ease-in-out;
+  z-index: 1000;
+}
 
-    .contenedor {
-      position: relative;
-      width: 100%;
-      max-width: 1000px;
-      margin: 60px auto;
-      height: 400px;
-      overflow: hidden;
-    }
+.div-opciones.activo {
+  left: 0;
+}
 
-    .carrusel {
-      display: flex;
-      transition: transform 0.6s ease;
-    }
+.div-opciones ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 
-    .lugar {
-      flex: 0 0 250px;
-      margin: 0 10px;
-      background: white;
-      border-radius: 10px;
-      text-align: center;
-      padding: 15px;
-      opacity: 0.5;
-      transform: scale(0.75);
-      transition: transform 0.5s ease, opacity 0.5s ease;
-    }
+.div-opciones ul li a {
+  width: 100%;
+  text-align: center;
+}
 
-    .lugar img {
-      width: 100%;
-      max-height: 120px;
-      object-fit: cover;
-      border-radius: 5px;
-    }
+/* Para la imagen del logo */
+.logo {
+  width: 80%;
+  display: block;
+  margin: 20px auto;
+}
 
-    .lugar.activo {
-      transform: scale(1.1);
-      opacity: 1;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    }
-
-    .flecha {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: #333;
-      color: #fff;
-      border: none;
-      font-size: 30px;
-      padding: 10px;
-      cursor: pointer;
-      border-radius: 5px;
-      opacity: 0.6;
-      z-index: 10;
-    }
-
-    .flecha:hover {
-      opacity: 1;
-    }
-
-    .flecha.izquierda {
-      left: 10px;
-    }
-
-    .flecha.derecha {
-      right: 10px;
-    }
-
-    /* El punto fijo del centro */
-    .ventana {
-      width: 100%;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-    }
-
-    .carrusel-wrapper {
-      display: flex;
-      align-items: center;
-      transition: transform 0.5s ease;
-    }
   </style>
 </head>
 <body>
+  <!-- Botón menú hamburguesa -->
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-<div class="contenedor">
-  <button class="flecha izquierda">&#8592;</button>
+<div>
+  <div class="video-background">
+    <div class="div-opciones" id="menu">
+      <ul>
+        <li><strong><a href="Empresa.html">Empresa</a></strong></li>
+        <li><strong><a href="productos.html">Productos</a></strong></li>
+        <li><strong><a href="#">Proyectos</a></strong></li>
+        <li>
+          <a href="dussich nuevo menu.html">
+            <img id="HOME" class="logo" src="imagenes y videos faac/dussich logo.png" alt="Logo de Dussich">
+          </a>
+        </li>
+        <li><strong><a href="#">Contactos</a></strong></li>
+        <li><strong><a href="#">Descargas</a></strong></li>
+        <li><strong><a class="dussichsecurity" href="#">Dussich Servicios</a></strong></li>
+      </ul>
+    </div>
 
-  <div class="ventana">
-    <div class="carrusel" id="carrusel">
-      <div class="lugar activo">
-        <h3>AEROPORTI</h3>
-        <img src="FOTOS MENU/Home_FAAC_Slider_Soluzioni_Aeroporti.webp" alt="">
-        <p>Ingressi automatici, Tornelli...</p>
-      </div>
-      <div class="lugar">
-        <h3>DATA CENTER</h3>
-        <img src="FOTOS MENU/Home_FAAC_Slider_Soluzioni_Data_Center.webp" alt="">
-        <p>Bussole, Porte di sicurezza...</p>
-      </div>
-      <div class="lugar">
-        <h3>UFFICI</h3>
-        <img src="FOTOS MENU/Home_FAAC_Slider_Soluzioni_Uffici_Centri_Direzionali.webp" alt="">
-        <p>Ingressi automatici, Barriere...</p>
-      </div>
-      <div class="lugar">
-        <h3>BANCHE</h3>
-        <img src="FOTOS MENU/Home_FAAC_Slider_Soluzioni_Banche_Ambasciate.webp" alt="">
-        <p>Ambasciate, dissuasori...</p>
-      </div>
-      <!-- Agrega más si quieres -->
+    <video autoplay muted loop playsinline>
+      <source src="imagenes y videos faac/video1 faac.mp4" type="video/mp4">
+    </video>
+
+    <div class="contenido">
+      <h3>Bienvenido a Dussich Services</h3>
+      <p>¡Nuestra experiencia para controlar tu acceso!</p>
     </div>
   </div>
-
-  <button class="flecha derecha">&#8594;</button>
 </div>
 
 <script>
-  const carrusel = document.querySelector('#carrusel');
-  const lugares = document.querySelectorAll('.lugar');
-  const btnIzq = document.querySelector('.flecha.izquierda');
-  const btnDer = document.querySelector('.flecha.derecha');
-
-  let indice = 0;
-  let intervalo;
-
-  function actualizarVista() {
-    lugares.forEach((el, i) => {
-      el.classList.remove('activo');
-    });
-
-    lugares[indice].classList.add('activo');
-
-    const anchoLugar = lugares[0].offsetWidth + 20;
-    const offset = (carrusel.parentElement.offsetWidth / 2) - (anchoLugar / 2);
-    const desplazamiento = (anchoLugar * indice);
-
-    carrusel.style.transform = `translateX(${-desplazamiento + offset}px)`;
+  function toggleMenu() {
+    document.querySelector('.div-opciones').classList.toggle('activo');
   }
-
-  function avanzar() {
-    indice = (indice + 1) % lugares.length;
-    actualizarVista();
-  }
-
-  function retroceder() {
-    indice = (indice - 1 + lugares.length) % lugares.length;
-    actualizarVista();
-  }
-
-  function iniciarAuto() {
-    intervalo = setInterval(avanzar, 4000);
-  }
-
-  function reiniciarAuto() {
-    clearInterval(intervalo);
-    iniciarAuto();
-  }
-
-  btnDer.addEventListener('click', () => {
-    avanzar();
-    reiniciarAuto();
-  });
-
-  btnIzq.addEventListener('click', () => {
-    retroceder();
-    reiniciarAuto();
-  });
-
-  // Inicializar
-  actualizarVista();
-  iniciarAuto();
 </script>
+
 
 </body>
 </html>
