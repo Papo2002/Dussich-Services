@@ -20,7 +20,7 @@ body {
   top: 0;
   left: -260px;
   width: 250px;
-  height: 45%;
+  height: 43.5%;
   background-color: rgba(0, 0, 0, 0.9);
   padding-top: 50px;
   transition: left 0.4s ease-in-out;
@@ -356,12 +356,12 @@ p.parrafo {
   width: 100%;
   max-width: 100%;
   margin: auto;
-  height: 750px;
+  height: 550px;
   overflow: hidden;
   background-image: url('FOTOS MENU/fondo.webp');
   flex-wrap: wrap;
   flex-direction: row;
-  padding: 50px 0;
+  padding: 0px 0;
 }
 
 .carrusel-wrapper {
