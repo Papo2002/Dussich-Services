@@ -20,7 +20,7 @@ body {
   top: 0;
   left: -260px;
   width: 250px;
-  height: 43.5%;
+  height: 45%;
   background-color: rgba(0, 0, 0, 0.9);
   padding-top: 50px;
   transition: left 0.4s ease-in-out;
@@ -452,13 +452,128 @@ p.parrafo {
   right: 10px;
 }
 
-
-
-@media (max-width: 480px) {
+/* Móviles pequeños: iPhone 5 en adelante */
+@media (max-width: 360px) { 
   .div-opciones ul {
     flex-direction: column;
     margin-top: 10%;
     display: flex;
+  }
+
+  .div-opciones {
+    height: 450px;
+    
+  }
+
+  .div-opciones a {
+    text-align: center;
+    margin-top: 0px;
+    width: 100%;
+    padding: 0px !important;
+    background-color: transparent !important;
+    margin-left: 30px;
+  }
+
+  .div-opciones li{
+    margin: 0px;
+
+  }
+
+  .video-background {
+    width: 100%;
+    height: 500px; /* <- Ajustado aquí */
+  }
+
+.div-opciones.activo {
+  width: 100%;
+}
+
+.div-opciones.activo ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0px !important;
+}
+
+
+
+
+
+  .contenido {
+    top: 35%;
+    font-size: 120%;
+    display: block; /* <- Mostrado nuevamente */
+  }
+
+  .div-opciones img {
+    width: 40%;
+  }
+  .logoA{
+    display: none;
+  }
+
+  .parrafo {
+    font-size: 180% !important;
+  }
+
+  .descripcion {
+    transform: scale(0.8);
+    transform-origin: top;
+  }
+
+  .divempresa1 {
+    margin: 15px 0px;
+    padding: 25px 50px;
+  }
+
+  .bio {
+    font-size: 15px;
+    width: 100%;
+    margin: 20px 0px;
+    text-align: center;
+  }
+
+  .carrusel-wrapper {
+    transform: scale(0.8);
+    transform-origin: center;
+    margin-left: 17px;
+  }
+
+  .flecha.derecha,
+  .flecha.izquierda {
+    transform: scale(0.5);
+  }
+
+  .lugar.activo {
+    font-size: 15px;
+    transform: scale(1);
+    transform-origin: center;
+  }
+
+  .nosotrso {
+    height: 30%;
+  }
+
+  .fondo2 {
+    height: 1400px;
+  }
+
+  .destradestra {
+    display: none;
+  } }
+
+/* Móviles medianos/grandes */
+@media (min-width: 361px) and (max-width: 480px) {
+  .div-opciones ul {
+    flex-direction: column;
+    margin-top: 10%;
+    display: flex;
+  }
+
+  .div-opciones {
+    height: 450px;
+    
   }
 
   .div-opciones a {
@@ -560,7 +675,123 @@ p.parrafo {
   }
 }
 
- @media (min-width: 820px) and  (max-width: 1200px) {
+@media (min-width: 481px) and (max-width: 768px) {.div-opciones ul {
+    flex-direction: column;
+    margin-top: 10%;
+    display: flex;
+  }
+
+  .div-opciones {
+    height: 450px;
+    
+  }
+
+  .div-opciones a {
+    text-align: center;
+    margin-top: 0px;
+    width: 100%;
+    padding: 0px !important;
+    background-color: transparent !important;
+    margin-left: 30px;
+  }
+
+  .div-opciones li{
+    margin: 0px;
+
+  }
+
+  .video-background {
+    width: 100%;
+    height: 500px; /* <- Ajustado aquí */
+  }
+
+.div-opciones.activo {
+  width: 100%;
+}
+
+.div-opciones.activo ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0px !important;
+}
+
+
+
+
+
+  .contenido {
+    top: 35%;
+    font-size: 120%;
+    display: block; /* <- Mostrado nuevamente */
+  }
+
+  .div-opciones img {
+    width: 40%;
+  }
+  .logoA{
+    display: none;
+  }
+
+  .parrafo {
+    font-size: 180% !important;
+  }
+
+  .descripcion {
+    transform: scale(0.8);
+    transform-origin: top;
+  }
+
+  .divempresa1 {
+    margin: 15px 0px;
+    padding: 25px 50px;
+  }
+
+  .bio {
+    font-size: 15px;
+    width: 100%;
+    margin: 20px 0px;
+    text-align: center;
+  }
+
+  .carrusel-wrapper {
+    transform: scale(0.8);
+    transform-origin: center;
+    margin-left: 17px;
+  }
+
+  .flecha.derecha,
+  .flecha.izquierda {
+    transform: scale(0.5);
+  }
+
+  .lugar.activo {
+    font-size: 15px;
+    transform: scale(1);
+    transform-origin: center;
+  }
+
+  .nosotrso {
+    height: 30%;
+  }
+
+  .fondo2 {
+    height: 1400px;
+  }
+
+  .destradestra {
+    display: none;
+  }  }
+
+
+
+
+
+
+
+/* Tablets en vertical */
+@media (min-width: 769px) and (max-width: 1024px) { 
   
   .div-opciones ul{
     display: flex;
@@ -639,8 +870,10 @@ p.parrafo {
     display: none;
   }
 
-  
-}
+   }
+
+
+ @media (min-width: 820px) and  (max-width: 1200px) {}
 
 
 @media (min-width: 1024px) {
