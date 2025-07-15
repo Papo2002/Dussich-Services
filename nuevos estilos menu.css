@@ -675,7 +675,9 @@ p.parrafo {
   }
 }
 
-@media (min-width: 481px) and (max-width: 768px) {.div-opciones ul {
+@media (min-width: 481px) and (max-width: 768px) {
+  
+  .div-opciones ul {
     flex-direction: column;
     margin-top: 10%;
     display: flex;
@@ -756,20 +758,24 @@ p.parrafo {
   }
 
   .carrusel-wrapper {
-    transform: scale(0.8);
+    transform: scale(0.9);
     transform-origin: center;
     margin-left: 17px;
   }
 
   .flecha.derecha,
   .flecha.izquierda {
-    transform: scale(0.5);
+    transform: scale(0.7);
   }
 
   .lugar.activo {
     font-size: 15px;
-    transform: scale(1);
+    transform: scale(1.0);
     transform-origin: center;
+  }
+
+  .lugar {
+    transform: scale(0.4);
   }
 
   .nosotrso {
@@ -786,13 +792,245 @@ p.parrafo {
 
 
 
-
-
-
-
 /* Tablets en vertical */
 @media (min-width: 769px) and (max-width: 1024px) { 
   
+  .div-opciones ul{
+    display: flex;
+  }
+
+  .div-opciones a{
+    text-align: center;
+    margin-top: 30px;
+    width: 80%;
+  }
+
+  .video-background{
+    width: 100%;
+    height: 700px;
+  }
+
+  .contenido{
+    top: 0%;
+    font-size: 100%;
+    display: none;
+  }
+
+  .div-opciones img{
+    width: 40%;
+  }
+
+.div-opciones {
+  position: fixed;
+  top: 0;
+  left: -260px; /* oculto por defecto */
+  width: 250px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: left 0.4s ease-in-out;
+  z-index: 1000;
+  padding: 0%;
+}
+
+.div-opciones.activo {
+  
+  left: 0; /* aparece cuando tiene clase "activo" */
+  width: 110%; /* ocupa todo el ancho de la pantalla */
+  height: 500px; /* ocupa toda la altura de la pantalla */
+  padding: 0px;
+}
+
+
+  .parrafo{
+    font-size: 180% !important;
+    
+  }
+
+  .divempresa1{
+    transform: scale(0.9);
+    gap: 0px;
+    padding: 25px 20px ;
+  }
+
+  .bio{
+    font-size: 23px;
+  }
+  .carrusel-wrapper{
+    transform: scale(1); /* 80% del tamaño original */
+    transform-origin: center;
+    margin-left: 17px;
+    ;
+  }
+
+  .flecha.derecha, .flecha.izquierda{
+    transform: scale(1);
+  }
+
+  .lugar.activo {
+    font-size: 15px;
+    
+    transform: scale(1.0); /* 80% del tamaño original */
+    transform-origin: center;  
+  }
+  .lugar{
+    transform: scale(0.7);
+  }
+
+  .nosotrso{
+    height: 30%;
+  }
+
+  .fondo2{
+    height: auto;
+  }
+  
+  .destradestra{
+    display: none;
+  }
+
+   }
+
+
+ @media (min-width: 820px) and  (max-width: 1200px) {
+  
+  .logoA{
+    display: none;
+  }
+
+.div-opciones ul {
+    flex-direction: column;
+    margin-top: 10%;
+    display: flex;
+    
+  }
+
+.div-opciones {
+  position: fixed;
+  top: 0;
+  left: -260px; /* oculto por defecto */
+  width: 250px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: left 0.4s ease-in-out;
+  z-index: 1000;
+  padding: 0%;
+}
+
+.div-opciones.activo {
+  
+  left: 0; /* aparece cuando tiene clase "activo" */
+  width: 110%; /* ocupa todo el ancho de la pantalla */
+  height: 500px; /* ocupa toda la altura de la pantalla */
+  padding: 0px;
+}
+
+
+  .div-opciones a {
+    text-align: center;
+    margin-top: 0px;
+    width: 100%;
+    padding: 0px !important;
+    background-color: transparent !important;
+    margin-left: 30px;
+  }
+
+  .div-opciones li{
+    margin: 0px;
+
+  }
+
+  .video-background {
+    width: 100%;
+    height: 500px; /* <- Ajustado aquí */
+  }
+
+
+.div-opciones.activo ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0px !important;
+}
+
+
+
+
+
+  .contenido {
+    top: 35%;
+    font-size: 120%;
+    display: block; /* <- Mostrado nuevamente */
+  }
+
+  .div-opciones img {
+    width: 40%;
+  }
+  .logoA{
+    display: none;
+  }
+
+  .parrafo {
+    font-size: 180% !important;
+  }
+
+  .descripcion {
+    transform: scale(0.8);
+    transform-origin: top;
+  }
+
+  .divempresa1 {
+    margin: 15px 0px;
+    padding: 35px 60px;
+  }
+
+  .bio {
+    font-size: 15px;
+    width: 98%;
+    margin: 20px 10px;
+    text-align: center;
+  }
+
+  .carrusel-wrapper {
+    transform: scale(0.9);
+    transform-origin: center;
+    margin-left: 17px;
+  }
+
+  .flecha.derecha,
+  .flecha.izquierda {
+    transform: scale(0.8);
+  }
+
+  .lugar.activo {
+    font-size: 15px;
+    transform: scale(1.0);
+    transform-origin: center;
+    width: 100%;
+  }
+
+    .lugar {
+    transform: scale(0.8);
+  }
+
+  .nosotrso {
+    height: 30%;
+  }
+
+  .fondo2 {
+    height: 750px;
+  }
+
+  .destradestra {
+    display: none;
+  }
+ }
+
+
+@media (min-width: 1024px) {
+  
+
+ 
   .div-opciones ul{
     display: flex;
   }
@@ -867,18 +1105,6 @@ p.parrafo {
   }
   
   .destradestra{
-    display: none;
-  }
-
-   }
-
-
- @media (min-width: 820px) and  (max-width: 1200px) {}
-
-
-@media (min-width: 1024px) {
-  
-  .div-opciones{
     display: none;
   }
   
