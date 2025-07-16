@@ -199,7 +199,7 @@ p.parrafo {
 
 .divempresa1:hover {
   background-color: rgba(135, 205, 50, 0.514);
-  transform: translateY(-5px) scale(1.05);
+  transform: translateY(-5px) scale(0.7);
   box-shadow: 0 10px 20px rgba(15, 205, 40, 0.453);
 }
 
