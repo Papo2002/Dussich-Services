@@ -908,9 +908,6 @@ p.parrafo {
 
 
  @media (min-width: 820px) and  (max-width: 1200px) {
- .bloque-video-nav {
-  display: none;
-}
 
   .logoA{
     display: none;
@@ -1542,11 +1539,8 @@ li a:hover {
   filter: brightness(0.6); /* puedes ajustar el brillo si quieres */
 }
 
-.contenido{
-  display: none;
-}
 
-.contenidoo {
+.contenido {
   position: relative;
   z-index: 1;
   color: #fff;
