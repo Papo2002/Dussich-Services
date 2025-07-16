@@ -8,30 +8,66 @@
     <link rel="stylesheet" href="productos.css">
 </head>
 <body>
+
+    <!-- MENÚ HORIZONTAL PARA PANTALLAS GRANDES
+<div class="bloque-video-nav">
+  <div class="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="imagenes y videos faac/video1 faac.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <nav class="menu-horizontal">
+    <ul>
+      <li><strong><a href="Empresa.html">Empresa</a></strong></li>
+      <li><strong><a href="productos.html">Productos</a></strong></li>
+      <li><strong><a href="#">Proyectos</a></strong></li>
+
+      <a class="logo" href="index.html">
+        <img id="HOME" class="logo" src="imagenes y videos faac/dussich logo.png" alt="Logo de Dussich">
+      </a>
+
+      <li><strong><a href="#">Contactos</a></strong></li>
+      <li><strong><a href="#">Descargas</a></strong></li>
+      <li><strong><a class="dussichsecurity" href="#">Dussich Servicios</a></strong></li>
+    </ul>
+  </nav>
+  <div class="contenidoo">
+            <h3>Bienvenido a Dussich Servicios</h3>
+            <p>¡Nuestra experiencia para controlar tu acceso!</p>
+        </div>
+
+</div> -->
+
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
 <div>
-    <div class="video-background">
-        <div class="div-opciones">
-            <ul>
-                <li><strong><a href="Empresa.html">Empresa</a></strong></li>
-                <li><strong><a href="productos.html">Productos</a></strong></li>
-                <li><strong><a href="#">Nuestros proyectos</a></strong></li>
-                <a style="width: 12%;" class="logoA" href="index.html">
-                    <img id="HOME" class="logo" src="imagenes y videos faac/dussich logo.png" alt="Logo Dussich">
-                </a>
-                <li><strong><a href="#">Contactos</a></strong></li>
-                <li><strong><a href="#">Descargas</a></strong></li>
-                <li><strong><a class="dussichsecurity" href="#">Dussich Seguridad</a></strong></li>
-            </ul>
-        </div>
-        <video autoplay muted loop playsinline>
-            <source src="imagenes y videos faac/video1 faac.mp4" type="video/mp4">
-        </video>
-        <div class="contenido">
-            <h1>Soluciones que se adaptan a cada contexto</h1>
-            <p>Nuestras soluciones integran tecnología e innovación para mejorar cada instante de tu experiencia.<br>
-            Respondemos a tus necesidades con automatizaciones que acercan el futuro, hoy.</p>
-        </div>
+  <div class="video-background">
+    <div class="div-opciones" id="menu">
+      <ul>
+        <li><strong><a href="Empresa.html">Empresa</a></strong></li>
+        <li><strong><a href="productos.html">Productos</a></strong></li>
+        <li><strong><a href="#">Proyectos</a></strong></li>
+        <li class="logoA">
+          <a  href="index.html">
+            <img id="HOME" class="logo" src="imagenes y videos faac/dussich logo.png" alt="Logo de Dussich">
+          </a>
+        </li>
+        <li><strong><a href="#">Contactos</a></strong></li>
+        <li><strong><a href="#">Descargas</a></strong></li>
+        <li><strong><a class="dussichsecurity" href="#">Dussich Servicios</a></strong></li>
+      </ul>
     </div>
+
+    <video autoplay muted loop playsinline>
+      <source src="imagenes y videos faac/video1 faac.mp4" type="video/mp4">
+    </video>
+
+    <div class="contenido">
+      <h3>Bienvenido a Dussich Services</h3>
+      <p>¡Nuestra experiencia para controlar tu acceso!</p>
+    </div>
+  </div>
 </div>
 
 <div class="parrafo1" id="link2">
@@ -64,7 +100,7 @@
 
     <a class="Aetiqueta" href="puertas atumaticas.html">
         <img src="imagenes y videos faac/porta automatica 2.webp" width="60%" alt="Puertas automáticas peatonales" /><br><br>
-        <span class="titulo1">Puertas automáticas peatonales</span>
+        <span class="titulo1">Puertas automáticas </span>
         <p>Automatizaciones para puertas corredizas y batientes para accesos peatonales.</p>
     </a>
 
@@ -128,5 +164,68 @@
         ¡Nuestra experiencia para controlar tu acceso!
     </div>
 </div>
+
+<script>
+  const carrusel = document.querySelector('#carrusel');
+  const lugares = document.querySelectorAll('.lugar');
+  const btnIzq = document.querySelector('.flecha.izquierda');
+  const btnDer = document.querySelector('.flecha.derecha');
+
+  let indice = 0;
+  let intervalo;
+
+  function actualizarVista() {
+    lugares.forEach((el, i) => {
+      el.classList.remove('activo');
+    });
+
+    lugares[indice].classList.add('activo');
+
+    const anchoLugar = lugares[0].offsetWidth + 20;
+    const offset = (carrusel.parentElement.offsetWidth / 2) - (anchoLugar / 2);
+    const desplazamiento = (anchoLugar * indice);
+
+    carrusel.style.transform = `translateX(${-desplazamiento + offset}px)`;
+  }
+
+  function avanzar() {
+    indice = (indice + 1) % lugares.length;
+    actualizarVista();
+  }
+
+  function retroceder() {
+    indice = (indice - 1 + lugares.length) % lugares.length;
+    actualizarVista();
+  }
+
+  function iniciarAuto() {
+    intervalo = setInterval(avanzar, 4000);
+  }
+
+  function reiniciarAuto() {
+    clearInterval(intervalo);
+    iniciarAuto();
+  }
+
+  btnDer.addEventListener('click', () => {
+    avanzar();
+    reiniciarAuto();
+  });
+
+  btnIzq.addEventListener('click', () => {
+    retroceder();
+    reiniciarAuto();
+  });
+
+  // Inicializar
+  actualizarVista();
+  iniciarAuto();
+</script>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('.div-opciones').classList.toggle('activo');
+  }
+</script>
 </body>
 </html>

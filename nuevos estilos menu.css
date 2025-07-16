@@ -1535,15 +1535,18 @@ li a:hover {
   filter: brightness(0.6); /* puedes ajustar el brillo si quieres */
 }
 
-.contenido {
-  all: unset;
+.contenido{
+  display: none;
+}
+
+.contenidoo {
   position: relative;
   z-index: 1;
   color: #fff;
   text-align: center;
-  top: 25%;
-  line-height: 30px;
-  font-size: 260%;
+  top: 20%;
+  line-height: 20px;
+  font-size: x-large;
 }
 
 .div-PrimeraParte {
@@ -1639,6 +1642,7 @@ p.parrafo {
   text-align: center;
   color: #000;
   margin: 30px 60px;
+  
   
 }
 
