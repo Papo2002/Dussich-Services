@@ -1054,6 +1054,7 @@ p.parrafo {
   .menu-horizontal {
     display: inline-flex;
     width: 100%;
+    display: flex;
   }
 
   .menu-horizontal ul {

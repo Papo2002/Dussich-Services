@@ -1,71 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-   
+  <title>Para mi Mamá 💖</title>
+  <link rel="stylesheet" href="estilo.css">
+  <script defer src="animaciones.js"></script>
+</head>
+<style>
+  body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff8f5;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
-/* Estilo lateral izquierdo */
+.titulo {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 2.5em;
+  color: #cc3366;
+  background-color: #ffe6eb;
+  margin: 0;
+  animation: fadeIn 2s ease-in;
+}
 
-.div-opciones.activo {
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.container {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.container img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.container .contenido {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.container .contenido:hover {
+  transform: scale(1.02);
+}
+
+.izquierda {
   left: 0;
 }
 
-.div-opciones ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+.derecha {
+  left: 50%;
 }
 
+.container::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  background-color: #ffb6c1;
+  border: 3px solid white;
+  top: 30px;
+  border-radius: 50%;
+  z-index: 1;
+}
 
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #ffb6c1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
 
-/* Para la imagen del logo */
-
-
-  </style>
-</head>
-<body>
-  <!-- Botón menú hamburguesa -->
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-<div>
-  <div class="video-background">
-    <div class="div-opciones" id="menu">
-      <ul>
-        <li><strong><a href="Empresa.html">Empresa</a></strong></li>
-        <li><strong><a href="productos.html">Productos</a></strong></li>
-        <li><strong><a href="#">Proyectos</a></strong></li>
-        <li>
-          <a href="dussich nuevo menu.html">
-            <img id="HOME" class="logo" src="imagenes y videos faac/dussich logo.png" alt="Logo de Dussich">
-          </a>
-        </li>
-        <li><strong><a href="#">Contactos</a></strong></li>
-        <li><strong><a href="#">Descargas</a></strong></li>
-        <li><strong><a class="dussichsecurity" href="#">Dussich Servicios</a></strong></li>
-      </ul>
-    </div>
-
-    <video autoplay muted loop playsinline>
-      <source src="imagenes y videos faac/video1 faac.mp4" type="video/mp4">
-    </video>
-
-    <div class="contenido">
-      <h3>Bienvenido a Dussich Services</h3>
-      <p>¡Nuestra experiencia para controlar tu acceso!</p>
-    </div>
-  </div>
-</div>
-
-<script>
-  function toggleMenu() {
-    document.querySelector('.div-opciones').classList.toggle('activo');
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
   }
-</script>
 
+  .derecha, .izquierda {
+    left: 0;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .container::after {
+    left: 15px;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animado.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+</style>
+<body>
+
+  <h1 class="titulo">Nuestra historia juntas 💖</h1>
+
+  <div class="timeline">
+    <div class="container izquierda animado">
+      <div class="contenido">
+        <img src="imagenes/mama1.jpg" alt="Recuerdo 1">
+        <p>Siempre fuiste mi abrigo en días fríos y mi sol en días oscuros.</p>
+      </div>
+    </div>
+    <div class="container derecha animado">
+      <div class="contenido">
+        <img src="imagenes/mama2.jpg" alt="Recuerdo 2">
+        <p>Esta sonrisa tuya la guardo en mi corazón todos los días.</p>
+      </div>
+    </div>
+    <div class="container izquierda animado">
+      <div class="contenido">
+        <img src="imagenes/mama3.jpg" alt="Recuerdo 3">
+        <p>Sin ti, yo no sería ni la mitad de lo que soy.</p>
+      </div>
+    </div>
+    <!-- Puedes seguir agregando más aquí -->
+  </div>
+
+<script>document.addEventListener("DOMContentLoaded", function () {
+  const elementos = document.querySelectorAll(".animado");
+
+  function mostrarElementos() {
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+
+    elementos.forEach(el => {
+      const distancia = el.getBoundingClientRect().top;
+      if (distancia < windowHeight - 100) {
+        el.classList.add("visible");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", mostrarElementos);
+  mostrarElementos(); // mostrar los visibles al cargar
+});
+</script>
 
 </body>
 </html>
