@@ -867,7 +867,6 @@ border-radius: 60px;
   }
 
   .imagen-carrusel {
-    width: 100%; /* Asegura que las imágenes ocupen todo el ancho disponible */
     height: auto; /* Mantiene la proporción de las imágenes */
   }
 
@@ -1205,10 +1204,7 @@ border-radius: 60px;
     padding: 0%;
   }
 
-  .flecha-izquierda, .flecha-derecha {
-    display: none;
-  }
-
+  
  
 
   .informacion-motor{
@@ -1266,9 +1262,6 @@ border-radius: 60px;
   margin-top: 0px;
 }
 
-.div-info br{
-  display: none;}
-
 
 
 .puntos-lado{
@@ -1305,9 +1298,6 @@ border-radius: 60px;
   font-size: small;
  }
 
- .Motores img{
-  display: none;
- }
 
 
 
@@ -1331,18 +1321,17 @@ border-radius: 60px;
 
 @media (min-width: 1024px) {
   .parrafo, .parrafo1 h1 {
-    font-size: medium;
+    font-size: x-large;
     margin: 0%;
     margin-bottom: 10px;
   }
 
   .imagen-carrusel{
-    height: auto; /* Ajusta la altura para móviles */
     border-radius: ppx;
   }
 
   .carrusel{
-    gap: 10px;
+    gap: 15px;
   }
 
   .div-scroll{
@@ -1352,24 +1341,24 @@ border-radius: 60px;
 
   .carrusel-container{
     width: 80%;
-    height: 100px;
+    height: 30vh;
     padding: 0%;
   }
 
-  .flecha-izquierda, .flecha-derecha {
-    display: none;
-  }
-
+ 
  
 
   .informacion-motor{
-    gap: 0px;
-    flex-direction: column;
-   
-  }
+           gap: 0px;
+        flex-direction: row;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+    }
 
   .informacion-motor h1{
-    width: 100%;
+    width: 30%;
     text-align: start;
     font-size: large;
     margin-bottom: 20px;
@@ -1377,7 +1366,7 @@ border-radius: 60px;
   }
 
   .informacion-motor2{
-    width: 100%;
+    width: 40%;
     font-size: medium;
     text-align: start;
   }
@@ -1388,6 +1377,8 @@ border-radius: 60px;
     text-align: center;
     margin-top: 15px;
     color: var(--verde-secundario);
+    width: 40%;
+    padding: 10px 1px;
   }
 
   .linea-orizontal {
@@ -1396,12 +1387,11 @@ border-radius: 60px;
   }
 
   .div-infoMotor{
-    gap: 50px;
-    flex-direction: column;
+    gap: 90px;
     margin: 0%;
-    width: 100%;
     padding: 0px 0px 20px 0px;
     height: 98vh;
+    margin-left: 7%;
   }
 
 .div-info{
@@ -1421,7 +1411,7 @@ border-radius: 60px;
   display: none;}
 
 
-
+/* 
 .puntos-lado{
   width: 100%;
   margin-left: 30px;
@@ -1474,27 +1464,24 @@ border-radius: 60px;
 
  .valor{
   width: 100%;
- } 
+ }  */
 
 
 
 }
 
 @media (max-width: 1280px) and (min-width: 630px) {
-  
-  .parrafo, .parrafo1 h1 {
-    font-size: medium;
+    .parrafo, .parrafo1 h1 {
+    font-size: x-large;
     margin: 0%;
     margin-bottom: 10px;
   }
 
-  .imagen-carrusel{
-    height: auto; /* Ajusta la altura para móviles */
-    border-radius: ppx;
-  }
+
+ 
 
   .carrusel{
-    gap: 10px;
+    gap: 15px;
   }
 
   .div-scroll{
@@ -1504,24 +1491,24 @@ border-radius: 60px;
 
   .carrusel-container{
     width: 80%;
-    height: 100px;
+    height: 30vh;
     padding: 0%;
   }
 
-  .flecha-izquierda, .flecha-derecha {
-    display: none;
-  }
-
+ 
  
 
   .informacion-motor{
-    gap: 0px;
-    flex-direction: column;
-   
-  }
+           gap: 20px;
+        flex-direction: row;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+    }
 
   .informacion-motor h1{
-    width: 100%;
+    width: 30%;
     text-align: start;
     font-size: large;
     margin-bottom: 20px;
@@ -1529,9 +1516,10 @@ border-radius: 60px;
   }
 
   .informacion-motor2{
-    width: 100%;
+    width: 56%;
     font-size: medium;
     text-align: start;
+    gap: 20px;
   }
 
   .Boton-pro{
@@ -1540,6 +1528,8 @@ border-radius: 60px;
     text-align: center;
     margin-top: 15px;
     color: var(--verde-secundario);
+    width: 40%;
+    padding: 10px 20px;
   }
 
   .linea-orizontal {
@@ -1548,12 +1538,12 @@ border-radius: 60px;
   }
 
   .div-infoMotor{
-    gap: 50px;
-    flex-direction: column;
+    gap: 90px;
     margin: 0%;
-    width: 100%;
     padding: 0px 0px 20px 0px;
     height: 98vh;
+    margin-left: 3%;
+    flex-direction: unset;
   }
 
 .div-info{
@@ -1563,24 +1553,56 @@ border-radius: 60px;
   
 }
 
+.div-info p{
+  
+  font-size: medium;
+}
+
 .div-info h1{
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 20px;
   margin-top: 0px;
 }
 
-.div-info br{
-  display: none;}
+.div-infoDetalles, .div-infoDetalles2 {
+  width: 80%;
+  
+}
 
 
+
+.c721, .c741, .c844, .c851, .c884 {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3% 0;
+    width: 100%;
+}
+
+.c884, .c741{
+  gap: 0px;
+  flex-direction: row-reverse;
+}
 
 .puntos-lado{
-  width: 100%;
-  margin-left: 30px;
+  width: 49%;
+  margin-left: 5%;
   padding: 0px;
   
 }
 
+ .imgM{
+  height: 5%;
+} 
+
+.Motores img{
+  display: block;
+  margin: 0 auto;
+  
+}
+
+/* 
  .puntos-lado li{
 
   width: 95%;
@@ -1626,7 +1648,7 @@ border-radius: 60px;
 
  .valor{
   width: 100%;
- } 
+ }  */
 
 
 
