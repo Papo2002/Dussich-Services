@@ -849,6 +849,28 @@ li a:hover {
   width: 100%;
  } 
 
+ .modal-flecha.left, .modal-flecha.right {
+  font-size: medium;
+  padding: 1px 3px;
+background-color: #ffffff59;  
+color: white;
+border-radius: 60px;
+}
+
+  .modal-close {
+    font-size: 24px; /* Reduce el tamaño de la X de cierre */
+  }
+
+  .carrusel-container {
+    width: 90%; /* Aumenta el ancho del carrusel para móviles */
+    height: auto; /* Ajusta la altura para móviles */
+  }
+
+  .imagen-carrusel {
+    width: 100%; /* Asegura que las imágenes ocupen todo el ancho disponible */
+    height: auto; /* Mantiene la proporción de las imágenes */
+  }
+
 
 }
 
