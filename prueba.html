@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>FAAC 400 Focus</title>
+<style>
+  body {
+    font-family: Poppins, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+
+  .descripcion {
+    display: flex;
+    justify-content: center; /* centra las columnas horizontalmente */
+    gap: 50px;               /* espacio entre columnas */
+    flex-wrap: wrap;         /* se ajusta en pantallas pequeñas */
+  }
+
+  .columna {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 450px;        /* ancho máximo */
+    text-align: center;
+  }
+
+  .columna img {
+    width: 100%;              /* ocupa todo el ancho de la columna */
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+  }
+
+  .columna h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .columna p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* Animación de aparición */
+  .columna {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: aparecer 1s forwards;
+  }
+
+  .columna:nth-child(1) {
+    animation-delay: 1s;
+  }
+
+  .columna:nth-child(2) {
+    animation-delay: 1.5s;
+  }
+
+  @keyframes aparecer {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center;">Focus prodotto: FAAC 400</h1>
+
+<div class="descripcion">
+
+  <div class="columna">
+    <img src="517c36b3-a2c0-45db-95a8-3f82b61f55ed.jpg" alt="Datos técnicos FAAC 400">
+    <h1>Datos técnicos principales</h1>
+    <p><strong>Tensión:</strong> 220–240V~ 50/60 Hz</p>
+    <p><strong>Potencia máxima:</strong> 220 W</p>
+    <p><strong>Frecuencia de uso:</strong> 50–70 ciclos/hora</p>
+  </div>
+
+  <div class="columna">
+    <h1>Características adicionales</h1>
+    <p><strong>Motor:</strong> Asíncrono monofase</p>
+    <p><strong>Ángulo apertura:</strong> 125°</p>
+    <p><strong>Ancho máximo hoja:</strong> 2,2 m | 7 m con electrocerradura</p>
+  </div>
+
+</div>
+
+</body>
+</html>

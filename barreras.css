@@ -1,0 +1,2324 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --verde-principal: #9acd32;
+  --verde-secundario: #2e7d32;
+  --gris-claro: #f4f4f4;
+  --negro: #222;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: var(--negro);
+}
+
+
+
+.puntos-lado1 {
+  padding: 0 0 0 70px;
+  margin: 0;
+  width: 45%;
+  position: relative;
+}
+
+.puntos-lado1 li {
+  list-style: disc inside;
+}
+
+.puntos-lado1 p {
+  margin: 5px 0 10px 0;
+  width: 90%;
+}
+
+
+
+.dussichsecurity {
+  color: rgb(244, 136, 0) !important;
+  background-color: rgb(108, 26, 49);
+}
+
+
+li a:hover {
+  background-color: var(--verde-secundario);
+  color: #fff;
+}
+
+li a {
+  text-decoration: none;
+  color: var(--verde-principal);
+  font-weight: bold;
+  font-size: 22px;
+  background-color: rgba(21, 199, 83, 0.2);
+  border-radius: 20px;
+  padding: 10px 25px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+  background-color: var(--verde-secundario);
+  color: white;
+}
+
+li a:hover {
+  background-color: var(--verde-secundario);
+  color: #fff;
+}
+
+.dussichsecurity {
+  color: rgb(244, 136, 0) !important;
+  background-color: rgb(108, 26, 49);
+}
+
+
+
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.6);
+}
+
+.contenido {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  top: 25%;
+  line-height: 30px;
+  font-size: 260%;
+}
+
+/* ========================= */
+/* Menú horizontal con logo centrado (corregido) */
+/* ========================= */
+.menu-horizontal{
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* izquierda | LOGO | derecha */
+  align-items: center;
+  margin-top: 20px;
+}
+
+.menu-left,
+.menu-right {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-left { 
+  justify-content: space-around; 
+}
+.menu-right { 
+  justify-content: space-around; 
+}
+
+.menu-logo {
+  justify-self: center;
+  display: block;
+  line-height: 0;
+}
+
+.logoIMG {
+  height: 100px; /* un poco más grande que los LI */
+  width: auto;
+  display: block;
+}
+
+.menu-left a,
+.menu-right a {
+  text-decoration: none;
+  color: var(--verde-principal);
+  background-color: rgba(21, 199, 83, 0.2);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.menu-left a:hover,
+.menu-right a:hover {
+  background-color: var(--verde-secundario);
+  color: #fff;
+}
+.bloque-video-nav { width: 100%; }
+
+
+.div-opciones {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 250px;
+  height: 45%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-top: 50px;
+  transition: left 0.4s ease-in-out;
+  z-index: 1000;
+}
+
+.div-opciones.activo { left: 0; }
+
+.div-opciones ul {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  gap: 20px;
+}
+
+.div-opciones ul li a { width: 100%; text-align: center; }
+.div-opciones a { width: 40%; text-align: center; }
+
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  z-index: 1001;
+  cursor: pointer;
+}
+
+
+/* -------------------- VIDEO DE FONDO -------------------- */
+
+/* -------------------- SECCIÓN TÍTULO -------------------- */
+.parrafo1 {
+  background: linear-gradient(var(--verde-principal), var(--verde-secundario));
+  color: white;
+  text-align: center;
+}
+
+.parrafo h1 {
+  margin-top: 20px;
+  font-size: 300%;
+  margin-bottom: 0;
+}
+
+.parrafo p {
+  margin-bottom: 20px;
+  font-size: 200%;
+  font-weight: 200;
+  margin-top: 0;
+}
+
+/* -------------------- PRODUCTOS / MOTORES -------------------- */
+.c400, .s800H, .c770N, .s450H, .g-bat {
+     display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3% 0;
+    width: 100%;
+    gap: 5%;
+
+}
+  
+
+.s800H, .c884, .s450H {
+  flex-direction: row-reverse;
+}
+
+
+.puntos-lado {
+  width: 45%;
+  margin-left: 10px;
+}
+
+.puntos-lado li {
+  width: 75%;
+  list-style: disc inside;
+  margin-top: 3%;}
+
+.puntos-lado p {
+  margin: 5px 0 10px 0;
+  width: 90%;
+}
+
+/* -------------------- LÍNEAS DE INFO -------------------- */
+.linea-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  width: 75%;
+  padding: 20px;
+}
+
+.etiqueta {
+  font-weight: bold;
+}
+
+.valor {
+  text-align: right;
+}
+
+.linea-orizontal {
+  width: 95%;
+  height: 2px;
+  background-color: #ccc;
+  margin: 60px 40px;
+}
+
+/* -------------------- BOTONES -------------------- */
+.Boton {
+  padding: 15px 30px;
+  background-color: var(--verde-principal);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--verde-secundario);
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.Boton:hover {
+  background-color: var(--verde-secundario);
+  color: var(--verde-principal);
+}
+
+/* -------------------- BIBLIOGRAFÍA / PIE DE PÁGINA -------------------- */
+.bibliografia {
+  background: linear-gradient(var(--verde-secundario), var(--verde-principal));
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 60px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logobibliografia {
+  flex: 1 1 150px;
+  max-width: 150px;
+}
+
+.divsinistra,
+.divcentro,
+.divdestra,
+.destradestra {
+  flex: 1 1 200px;
+  min-width: 180px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.divdestra {
+  text-align: left;
+}
+
+.destradestra {
+  text-align: right;
+  font-size: 24px;
+}
+
+
+  .carrusel-container {
+    position: relative;
+    padding: 20px 50px;
+    box-shadow: 0 0 0px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 50%;
+
+  }
+
+  .carrusel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+
+  }
+
+  .carrusel::-webkit-scrollbar {
+    height: 8px;
+  }
+  .carrusel::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 4px;
+  }
+
+.imagen-carrusel {
+  flex: 0 0 auto;
+  width: 30%;       /* Mantén o ajusta */
+  height: 320px;    /* Aumenta la altura para que no se vean aplastadas */
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  object-fit:cover;  /* Muy importante para que la imagen mantenga proporción sin distorsión */
+}
+
+
+  .imagen-carrusel:hover {
+    transform: scale(1.05);
+  }
+
+  .flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.9);
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    user-select: none;
+    z-index: 20;
+  }
+  .flecha:hover {
+    background: #eee;
+  }
+
+  .flecha-izquierda {
+    left: 5px;
+  }
+
+  .flecha-derecha {
+    right: 5px;
+  }
+
+  /* Modal overlay */
+  .modal {
+    display: none; /* oculto inicialmente */
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .modal.active {
+    display: flex;
+  }
+
+  .modal-content {
+    position: relative;
+    max-width: 60vw;
+    max-height: 80vh;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  }
+
+  .modal-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 28px;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+    font-weight: bold;
+    z-index: 1010;
+  }
+  .modal-close:hover {
+    color: #000;
+  }
+
+  /* Flechas dentro modal */
+  .modal-flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.9);
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    user-select: none;
+    z-index: 1010;
+    transition: background 0.3s ease;
+  }
+  .modal-flecha:hover {
+    background: #eee;
+  }
+  .modal-flecha.left {
+    left: 10px;
+  }
+  .modal-flecha.right {
+    right: 10px;
+  }
+
+
+.simbolito{
+    padding: 10px 20px;
+    background-color: black;
+    
+  }
+
+.div-scroll{
+     display: inline-flex;
+     margin-top: 3%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+}
+
+
+.informacion-motor{
+    margin-top: 5%;
+    display: inline-flex;
+    text-align: start;
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 100px;
+}
+.informacion-motor h1{
+  width: 40%;
+  margin: 0px;
+}
+
+
+
+.informacion-motor2{
+  display: block;
+  text-align: start;
+  width: 50%;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0px;
+  font-size: large;
+}
+
+
+
+.Boton-pro {
+  padding: 15px 30px;
+  background-color: var(--verde-principal);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--verde-secundario);
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.Boton-pro:hover {
+  background-color: var(--verde-secundario);
+  color: var(--verde-principal);
+}
+
+
+
+.div-infoMotor {
+  display: flex;
+  flex-direction: row;
+  padding: 40px 0% 40px 0%;
+  gap: 20%;
+  height: 80vh;
+  width: 95%;
+  margin-top: 0%;
+  margin-left: 5%;
+  
+}
+
+.div-info p{
+  color: grey;
+  font-size: large;
+}
+
+.div-infoMotor li{
+  list-style: none;
+  margin: 0px;
+}
+
+.div-infoMotor li::before{
+   content: "✔";
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Parte izquierda fija */
+.div-info {
+  flex: 1 1 30%;
+  position: sticky;
+  top: 40px;
+  align-self: flex-start;
+  height: fit-content;
+  width: 100%;
+}
+
+/* Parte derecha con scroll */
+.contenedor-scroll {
+  flex: 1 1 65%;
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 10px;
+  scroll-behavior: smooth;
+}
+
+/* Estilos de los detalles */
+.div-infoDetalles, .div-infoDetalles2 {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+  margin-bottom: 40px;
+  width: 80%;
+  text-align: start;
+  
+}
+
+
+.div-infoDetalles ul{
+  padding: 0px;
+  
+}
+
+.div-infoDetalles2 ul{
+  padding: 0px;
+}
+
+.linea-orizontalM{
+    width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  margin: 60px 0px;
+}
+
+/* Botones */
+.boton-switch {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+.boton-switch.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+
+/* -------------------- RESPONSIVE DESIGN -------------------- */
+
+/* Para tablets y pantallas medianas */
+
+
+/* --------------------------------------------------------------------------------------------------- */
+  
+@media (min-width: 1024px) {
+
+
+
+.menu-toggle {
+  display: none; 
+} 
+}
+
+@media (max-width: 1280px) and (min-width: 630px) {
+
+ .menu-left, .menu-right {
+  transform: scale(0.8);
+  font-size: 30px;
+} 
+
+.contenido{
+  font-size: xx-large;
+}
+
+.dussichsecurity{
+  white-space: nowrap;
+}
+
+.menu-toggle {
+  display: none; 
+} 
+
+}
+
+@media (max-width: 360px) {  
+ 
+  .parrafo, .parrafo1 h1 {
+    font-size: medium;
+    margin: 0%;
+    margin-bottom: 10px;
+  }
+
+  .imagen-carrusel{
+    height: auto; /* Ajusta la altura para móviles */
+    border-radius: ppx;
+  }
+
+  .carrusel{
+    gap: 10px;
+  }
+
+  .div-scroll{
+    height: 100%;
+    margin-top: 50px;
+  }
+
+  .carrusel-container{
+    width: 80%;
+    height: 100px;
+    padding: 0%;
+  }
+
+  .flecha-izquierda, .flecha-derecha {
+    display: none;
+  }
+
+ 
+
+  .informacion-motor{
+    gap: 0px;
+    flex-direction: column;
+    font-size: large;
+  }
+
+ 
+  
+
+ 
+  .informacion-motor h1{
+    width: 100%;
+    text-align: start;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: large;
+
+  }
+
+
+  .informacion-motor2{
+    width: 100%;
+    font-size: medium;
+    text-align: start;
+  }
+
+  .Boton-pro{
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+    color: var(--verde-secundario);
+  }
+
+  .linea-orizontal {
+    width: 80%;
+    margin: 40px auto;
+  }
+
+  .div-infoMotor{
+    gap: 50px;
+    flex-direction: column;
+    margin: 0%;
+    width: 100%;
+    padding: 0px 0px 20px 0px;
+    height: 98vh;
+  }
+
+.div-info{
+  width: 92.3%;
+  margin-left: 20px;
+  margin-top: 0px;
+  
+}
+
+.div-info h1{
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.div-info br{
+  display: none;}
+
+
+ .Motores img{
+  display: none;
+ }
+
+ .Motores{
+  margin-top: 30px;
+ }
+
+
+.puntos-lado{
+  width: 100%;
+  margin-left: 30px;
+  padding: 0px;
+  
+}
+
+ .puntos-lado li{
+
+  width: 95%;
+  list-style: disc inside;
+  margin-top: 3%;
+  font-size: medium;
+
+ }
+
+ .puntos-lado h1{
+  font-size: xx-large;
+  margin-bottom: 10px;
+  margin-top: 0px;
+ }
+
+ .puntos-lado h2{
+  font-size: large;
+ }
+
+ .puntos-lado h3{
+  font-size: medium;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  width: 89%;
+    display: list-item;
+  list-style-type: disc;  /* Tipo de punto */
+  margin-left: 18px;   
+
+ }
+
+ .puntos-lado p li{
+  margin: 5px 0 10px 0;
+  width: 96%;
+  font-size: 13px;
+ }
+
+ .Motores img{
+  display: none;
+ }
+
+ .Motores{
+  margin-top: 30px;
+ }
+
+
+ .linea-info{
+  width: 90%;
+  padding: 10px;
+  padding-left: 0%;
+  
+ }
+ .etiqueta{
+  width: 50%;
+  font-size: medium;
+}
+
+ .valor{
+  width: 100%;
+  font-size: medium;
+ } 
+
+ .Boton{
+  margin-top: 0px;
+  transform: scale(1);
+ }
+
+ 
+ .bloque-video-nav {
+  display: none;
+}
+
+
+  .div-opciones ul {
+    flex-direction: column;
+    margin-top: 10%;
+    display: flex;
+  }
+
+  .div-opciones {
+    height: 450px;
+    
+  }
+
+  .div-opciones a {
+    text-align: center;
+    margin-top: 0px;
+    width: 100%;
+    padding: 0px !important;
+    background-color: transparent !important;
+    margin-left: 30px;
+  }
+
+  .div-opciones li{
+    margin: 0px;
+
+  }
+
+  .video-background {
+    width: 100%;
+    height: 500px; /* <- Ajustado aquí */
+  }
+
+.div-opciones.activo {
+  width: 100%;
+}
+
+.div-opciones.activo ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0px !important;
+}
+
+
+
+  .contenido {
+    top: 35%;
+    font-size: 120%;
+    display: block; /* <- Mostrado nuevamente */
+  }
+
+  .div-opciones img {
+    width: 40%;
+  }
+  .logoA{
+    display: none;
+  }
+
+}
+
+/* Móviles medianos/grandes */
+@media (min-width: 361px) and (max-width: 480px) {
+ 
+  .parrafo, .parrafo1 h1 {
+    font-size: medium;
+    margin: 0%;
+    margin-bottom: 10px;
+  }
+
+  .imagen-carrusel{
+    height: auto; /* Ajusta la altura para móviles */
+    border-radius: ppx;
+  }
+
+  .carrusel{
+    gap: 10px;
+  }
+
+  .div-scroll{
+    height: 100%;
+    margin-top: 50px;
+  }
+
+  .carrusel-container{
+    width: 80%;
+    height: 100px;
+    padding: 0%;
+  }
+
+  .flecha-izquierda, .flecha-derecha {
+    display: none;
+  }
+
+ 
+
+  .informacion-motor{
+    gap: 0px;
+    flex-direction: column;
+  }
+
+ 
+  
+
+  .informacion-motor h1{
+    width: 100%;
+    text-align: start;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: large;
+    text-align: center;
+
+  }
+
+  .informacion-motor2{
+    width: 100%;
+    font-size: medium;
+    text-align: start;
+  }
+
+  .Boton-pro{
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+    color: var(--verde-secundario);
+  }
+
+  .linea-orizontal {
+    width: 80%;
+    margin: 40px auto;
+  }
+
+  .div-infoMotor{
+    gap: 50px;
+    flex-direction: column;
+    margin: 0%;
+    width: 100%;
+    padding: 0px 0px 20px 0px;
+    height: 98vh;
+  }
+
+.div-info{
+  width: 92.3%;
+  margin-left: 20px;
+  margin-top: 0px;
+  
+}
+
+.div-info h1{
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.div-info br{
+  display: none;}
+
+
+ .Motores img{
+  display: none;
+ }
+
+ .Motores{
+  margin-top: 30px;
+ }
+
+
+.puntos-lado{
+  width: 100%;
+  margin-left: 30px;
+  padding: 0px;
+  
+}
+
+ .puntos-lado li{
+
+  width: 95%;
+  list-style: disc inside;
+  margin-top: 3%;
+  font-size: medium;
+
+ }
+
+ .puntos-lado h1{
+  font-size: xx-large;
+  margin-bottom: 10px;
+  margin-top: 0px;
+ }
+
+ .puntos-lado h2{
+  font-size: large;
+ }
+
+ .puntos-lado h3{
+  font-size: medium;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  width: 89%;
+    display: list-item;
+  list-style-type: disc;  /* Tipo de punto */
+  margin-left: 18px;   
+
+ }
+
+ .puntos-lado p li{
+  margin: 5px 0 10px 0;
+  width: 96%;
+  font-size: 13px;
+ }
+
+ .Motores img{
+  display: none;
+ }
+
+ .Motores{
+  margin-top: 30px;
+ }
+
+
+ .linea-info{
+  width: 90%;
+  padding: 10px;
+  padding-left: 0%;
+  
+ }
+ .etiqueta{
+  width: 50%;
+  font-size: medium;
+}
+
+ .valor{
+  width: 100%;
+  font-size: 15px;
+ } 
+
+ .Boton{
+  margin-top: 0px;
+  transform: scale(1);
+ }
+
+
+ .bloque-video-nav {
+  display: none;
+}
+
+  .div-opciones ul {
+    flex-direction: column;
+    margin-top: 10%;
+    display: flex;
+  }
+
+  .div-opciones {
+    height: 450px;
+    
+  }
+
+  .div-opciones a {
+    text-align: center;
+    margin-top: 0px;
+    width: 100%;
+    padding: 0px !important;
+    background-color: transparent !important;
+    margin-left: 30px;
+  }
+
+  .div-opciones li{
+    margin: 0px;
+
+  }
+
+  .video-background {
+    width: 100%;
+    height: 500px; /* <- Ajustado aquí */
+  }
+
+.div-opciones.activo {
+  width: 100%;
+}
+
+.div-opciones.activo ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0px !important;
+}
+
+
+
+
+
+  .contenido {
+    top: 35%;
+    font-size: 120%;
+    display: block; /* <- Mostrado nuevamente */
+  }
+
+  .div-opciones img {
+    width: 40%;
+  }
+  .logoA{
+    display: none;
+  }
+
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+   
+  .parrafo, .parrafo1 h1 {
+    font-size: medium;
+    margin: 0%;
+    margin-bottom: 10px;
+  }
+
+  .imagen-carrusel{
+    height: auto; /* Ajusta la altura para móviles */
+    border-radius: ppx;
+  }
+
+  .carrusel{
+    gap: 10px;
+  }
+
+  .div-scroll{
+    height: 100%;
+    margin-top: 50px;
+  }
+
+  .carrusel-container{
+    width: 80%;
+    height: 100px;
+    padding: 0%;
+  }
+
+  .flecha-izquierda, .flecha-derecha {
+    display: none;
+  }
+
+ 
+
+  .informacion-motor{
+    gap: 0px;
+    flex-direction: column;
+  }
+
+ 
+  
+
+
+  .informacion-motor h1{
+    width: 100%;
+    text-align: start;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: x-large;
+
+  }
+
+
+  .informacion-motor2{
+    width: 100%;
+    font-size: medium;
+    text-align: start;
+  }
+
+  .Boton-pro{
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+    color: var(--verde-secundario);
+  }
+
+  .linea-orizontal {
+    width: 80%;
+    margin: 40px auto;
+  }
+
+  .div-infoMotor{
+    gap: 50px;
+    flex-direction: column;
+    margin: 0%;
+    width: 100%;
+    padding: 0px 0px 20px 0px;
+    height: 98vh;
+  }
+
+.div-info{
+  width: 90%;
+  margin-left: 28px;
+  margin-top: 0px;
+  
+}
+
+.div-info h1{
+  font-size: x-large;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.div-info p{
+  font-size: medium;
+}
+
+
+
+ .Motores img{
+  display: none;
+ }
+
+ .Motores{
+  margin-top: 30px;
+ }
+
+
+.puntos-lado{
+  width: 100%;
+  margin-left: 30px;
+  padding: 0px;
+  
+}
+
+ .puntos-lado li{
+
+  width: 95%;
+  list-style: disc inside;
+  margin-top: 3%;
+  font-size: medium;
+
+ }
+
+ .puntos-lado h1{
+  font-size: xx-large;
+  margin-bottom: 10px;
+  margin-top: 0px;
+ }
+
+ .puntos-lado h2{
+  font-size: large;
+ }
+
+ .puntos-lado h3{
+  font-size: medium;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  width: 89%;
+    display: list-item;
+  list-style-type: disc;  /* Tipo de punto */
+  margin-left: 18px;   
+
+ }
+
+ .puntos-lado p li{
+  margin: 5px 0 10px 0;
+  width: 96%;
+  font-size: 13px;
+ }
+
+ .Motores img{
+  display: none;
+ }
+
+ .Motores{
+  margin-top: 30px;
+ }
+
+
+ .linea-info{
+  width: 90%;
+  padding: 10px;
+  padding-left: 0%;
+  
+ }
+ .etiqueta{
+  width: 70%;
+  font-size: large;
+}
+
+ .valor{
+  width: 100%;
+  font-size: medium;
+  
+ } 
+
+ .Boton{
+  margin-top: 0px;
+  transform: scale(1);
+
+ }
+
+ 
+.bloque-video-nav {
+  display: none;
+}
+
+  .div-opciones ul {
+    flex-direction: column;
+    margin-top: 10%;
+    display: flex;
+  }
+
+  .div-opciones {
+    height: 450px;
+    
+  }
+
+  .div-opciones a {
+    text-align: center;
+    margin-top: 0px;
+    width: 100%;
+    padding: 0px !important;
+    background-color: transparent !important;
+    margin-left: 30px;
+  }
+
+  .div-opciones li{
+    margin: 0px;
+
+  }
+
+  .video-background {
+    width: 100%;
+    height: 500px; /* <- Ajustado aquí */
+  }
+
+.div-opciones.activo {
+  width: 100%;
+}
+
+.div-opciones.activo ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0px !important;
+}
+
+
+
+
+
+  .contenido {
+    top: 35%;
+    font-size: 120%;
+    display: block; /* <- Mostrado nuevamente */
+  }
+ .div-opciones img {
+    width: 40%;
+  }
+  .logoA{
+    display: none;
+  }
+
+
+ }
+
+/* Tablets en vertical */
+@media (min-width: 769px) and (max-width: 1024px) { 
+.parrafo, .parrafo1 h1 {
+    font-size: medium;
+    margin: 0%;
+    margin-bottom: 10px;
+  }
+
+  .imagen-carrusel{
+    height: auto; /* Ajusta la altura para móviles */
+    border-radius: ppx;
+  }
+
+  .carrusel{
+    gap: 10px;
+  }
+
+  .div-scroll{
+    height: 100%;
+    margin-top: 50px;
+  }
+
+  .carrusel-container{
+    width: 80%;
+    height: 100px;
+    padding: 0%;
+  }
+
+  .flecha-izquierda, .flecha-derecha {
+    display: none;
+  }
+
+ 
+
+  .informacion-motor{
+    gap: 0px;
+    flex-direction: column;
+  }
+
+ 
+  
+
+
+  .informacion-motor h1{
+    width: 100%;
+    text-align: start;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: x-large;
+
+  }
+
+
+  .informacion-motor2{
+    width: 100%;
+    font-size: medium;
+    text-align: start;
+  }
+
+  .Boton-pro{
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+    color: var(--verde-secundario);
+  }
+
+  .linea-orizontal {
+    width: 80%;
+    margin: 40px auto;
+  }
+
+  .div-infoMotor{
+    gap: 50px;
+    flex-direction: column;
+    margin: 0%;
+    width: 100%;
+    padding: 0px 0px 20px 0px;
+    height: 98vh;
+  }
+
+.div-info{
+  width: 90%;
+  margin-left: 28px;
+  margin-top: 0px;
+  
+}
+
+.div-info h1{
+  font-size: x-large;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.div-info p{
+  font-size: medium;
+}
+
+
+
+ .Motores img{
+  display: none;
+ }
+
+ .Motores{
+  margin-top: 30px;
+ }
+
+
+.puntos-lado{
+  width: 100%;
+  margin-left: 30px;
+  padding: 0px;
+  
+}
+
+ .puntos-lado li{
+
+  width: 95%;
+  list-style: disc inside;
+  margin-top: 3%;
+  font-size: medium;
+
+ }
+
+ .puntos-lado h1{
+  font-size: xx-large;
+  margin-bottom: 10px;
+  margin-top: 0px;
+ }
+
+ .puntos-lado h2{
+  font-size: large;
+ }
+
+ .puntos-lado h3{
+  font-size: medium;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  width: 89%;
+    display: list-item;
+  list-style-type: disc;  /* Tipo de punto */
+  margin-left: 18px;   
+
+ }
+
+ .puntos-lado p li{
+  margin: 5px 0 10px 0;
+  width: 96%;
+  font-size: 13px;
+ }
+
+ .Motores img{
+  display: none;
+ }
+
+ .Motores{
+  margin-top: 30px;
+ }
+
+
+ .linea-info{
+  width: 90%;
+  padding: 10px;
+  padding-left: 0%;
+  
+ }
+ .etiqueta{
+  width: 70%;
+  font-size: large;
+}
+
+ .valor{
+  width: 100%;
+  font-size: medium;
+  
+ } 
+
+ .Boton{
+  margin-top: 0px;
+  transform: scale(1);
+
+ }
+
+
+    .div-opciones ul{
+    display: flex;
+  }
+
+  .div-opciones a{
+    text-align: center;
+    margin-top: 30px;
+    width: 80%;
+  }
+
+ 
+  .div-opciones img{
+    width: 40%;
+  }
+
+.div-opciones {
+  position: fixed;
+  top: 0;
+  left: -260px; /* oculto por defecto */
+  width: 250px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: left 0.4s ease-in-out;
+  z-index: 1000;
+  padding: 0%;
+}
+
+.div-opciones.activo {
+  
+  left: 0; /* aparece cuando tiene clase "activo" */
+  width: 110%; /* ocupa todo el ancho de la pantalla */
+  height: 500px; /* ocupa toda la altura de la pantalla */
+  padding: 0px;
+}
+  .logoA{
+    display: none;
+   }
+}
+
+
+ @media (min-width: 820px) and  (max-width: 1200px) {
+  .parrafo, .parrafo1 h1 {
+    font-size: medium;
+    margin: 0%;
+    margin-bottom: 10px;
+  }
+
+  .imagen-carrusel{
+    height: auto; /* Ajusta la altura para móviles */
+    border-radius: ppx;
+  }
+
+  .carrusel{
+    gap: 10px;
+  }
+
+  .div-scroll{
+    height: 100%;
+    margin-top: 50px;
+  }
+
+  .carrusel-container{
+    width: 80%;
+    height: 100px;
+    padding: 0%;
+  }
+
+  .flecha-izquierda, .flecha-derecha {
+    display: none;
+  }
+
+ 
+
+  .informacion-motor{
+    gap: 0px;
+    flex-direction: column;
+  }
+
+ 
+  
+
+
+  .informacion-motor h1{
+    width: 100%;
+    text-align: start;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: x-large;
+
+  }
+
+
+  .informacion-motor2{
+    width: 100%;
+    font-size: medium;
+    text-align: start;
+  }
+
+  .Boton-pro{
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+    color: var(--verde-secundario);
+  }
+
+  .linea-orizontal {
+    width: 80%;
+    margin: 40px auto;
+  }
+
+  .div-infoMotor{
+    gap: 50px;
+    flex-direction: column;
+    margin: 0%;
+    width: 100%;
+    padding: 0px 0px 20px 0px;
+    height: 98vh;
+  }
+
+.div-info{
+  width: 90%;
+  margin-left: 28px;
+  margin-top: 0px;
+  
+}
+
+.div-info h1{
+  font-size: x-large;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.div-info p{
+  font-size: medium;
+}
+
+
+
+ .Motores img{
+  display: none;
+ }
+
+ .Motores{
+  margin-top: 30px;
+ }
+
+
+.puntos-lado{
+  width: 100%;
+  margin-left: 30px;
+  padding: 0px;
+  
+}
+
+ .puntos-lado li{
+
+  width: 95%;
+  list-style: disc inside;
+  margin-top: 3%;
+  font-size: medium;
+
+ }
+
+ .puntos-lado h1{
+  font-size: xx-large;
+  margin-bottom: 10px;
+  margin-top: 0px;
+ }
+
+ .puntos-lado h2{
+  font-size: large;
+ }
+
+ .puntos-lado h3{
+  font-size: medium;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  width: 89%;
+    display: list-item;
+  list-style-type: disc;  /* Tipo de punto */
+  margin-left: 18px;   
+
+ }
+
+ .puntos-lado p li{
+  margin: 5px 0 10px 0;
+  width: 96%;
+  font-size: 13px;
+ }
+
+ .Motores img{
+  display: none;
+ }
+
+ .Motores{
+  margin-top: 30px;
+ }
+
+
+ .linea-info{
+  width: 90%;
+  padding: 10px;
+  padding-left: 0%;
+  
+ }
+ .etiqueta{
+  width: 70%;
+  font-size: large;
+}
+
+ .valor{
+  width: 100%;
+  font-size: medium;
+  
+ } 
+
+ .Boton{
+  margin-top: 0px;
+  transform: scale(1);
+
+ }
+
+ 
+.div-opciones ul {
+    flex-direction: column;
+    margin-top: 10%;
+    display: flex;
+    
+  }
+
+.div-opciones {
+  position: fixed;
+  top: 0;
+  left: -260px; /* oculto por defecto */
+  width: 250px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: left 0.4s ease-in-out;
+  z-index: 1000;
+  padding: 0%;
+}
+
+.div-opciones.activo {
+  
+  left: 0; /* aparece cuando tiene clase "activo" */
+  width: 110%; /* ocupa todo el ancho de la pantalla */
+  height: 500px; /* ocupa toda la altura de la pantalla */
+  padding: 0px;
+}
+
+
+  .div-opciones a {
+    text-align: center;
+    margin-top: 0px;
+    width: 100%;
+    padding: 0px !important;
+    background-color: transparent !important;
+    margin-left: 30px;
+  }
+
+  .div-opciones li{
+    margin: 0px;
+
+  }
+
+
+
+.div-opciones.activo ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0px !important;
+}
+
+
+
+
+   .div-opciones img {
+    width: 40%;
+  }
+  .logoA{
+    display: none;
+  }
+
+
+ }
+
+
+@media (min-width: 1024px) {
+.parrafo, .parrafo1 h1 {
+    font-size: medium;
+    margin: 0%;
+    margin-bottom: 10px;
+  }
+
+  .imagen-carrusel{
+    height: auto; /* Ajusta la altura para móviles */
+    border-radius: ppx;
+  }
+
+  .carrusel{
+    gap: 10px;
+  }
+
+  .div-scroll{
+    height: 100%;
+    margin-top: 50px;
+    
+  }
+
+  .carrusel-container{
+    width: 90%;
+    height: 300px;
+    padding: 0%;
+  }
+
+ 
+ 
+
+
+
+
+  .informacion-motor{
+       gap: 20px;
+        flex-direction: row;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+    
+  }
+  
+
+  .informacion-motor h1{
+    width: 30%;
+    text-align: start;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+
+  }
+
+
+  .informacion-motor2{
+    width: 56%;
+    font-size: medium;
+    text-align: start;
+  }
+
+  .Boton-pro{
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+    color: var(--verde-secundario);
+  }
+
+  .linea-orizontal {
+    width: 80%;
+    margin: 40px auto;
+  }
+
+  .div-infoMotor{
+    gap: 10%;
+    margin: 0%;
+    padding: 0px 0px 20px 0px;
+    height: 98vh;
+    flex-direction: unset;
+    margin-left: 50%;
+  }
+
+.div-info{
+  width: 100%;
+  margin-left: 40px;
+  margin-top: 0px;
+  
+}
+
+.div-info h1{
+  font-size: x-large;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.div-info p{
+  font-size: large;
+}
+
+
+
+ 
+
+ .Motores{
+  margin-top: 30px;
+ }
+
+
+ .c400, .s800H, .c770N, .s450H, .g-bat {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3% 0;
+    width: 100%;
+    gap: 0px;
+
+}
+  
+
+.s800H, .c884, .s450H {
+  gap: 0px;
+  flex-direction: row-reverse;}
+
+
+.puntos-lado{
+  width: 49%;
+  margin-left: 5%;
+  padding: 0px;
+  
+  
+}
+
+ .puntos-lado li{
+
+  width: 95%;
+  list-style: disc inside;
+  margin-top: 3%;
+  font-size: medium;
+
+ }
+
+ .puntos-lado h1{
+  font-size: xx-large;
+  margin-bottom: 10px;
+  margin-top: 0px;
+ }
+
+ .puntos-lado h2{
+  font-size: large;
+ }
+
+ .puntos-lado h3{
+  font-size: medium;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  width: 89%;
+    display: list-item;
+  list-style-type: disc;  /* Tipo de punto */
+  margin-left: 18px;   
+
+ }
+
+ .puntos-lado p li{
+  margin: 5px 0 10px 0;
+  width: 96%;
+  font-size: 13px;
+ }
+
+.Motores img{
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+  height: 720px;
+  
+}
+
+ .Motores{
+  margin-top: 30px;
+ }
+
+
+ .linea-info{
+  width: 90%;
+  padding: 10px;
+  padding-left: 0%;
+  
+ }
+ .etiqueta{
+  width: 70%;
+  font-size: large;
+}
+
+ .valor{
+  width: 100%;
+  font-size: large;
+  
+ } 
+
+ .Boton{
+  margin-top: 0px;
+  transform: scale(1);
+
+ }
+
+  .escondido {
+    display: none;
+  }
+
+
+.menu-toggle{
+  display: none;
+}
+}
+
+@media (max-width: 1280px) and (min-width: 630px) {
+ .parrafo, .parrafo1 h1 {
+    font-size: medium;
+    margin: 0%;
+    margin-bottom: 10px;
+  }
+
+  .imagen-carrusel{
+    height: auto; /* Ajusta la altura para móviles */
+    border-radius: ppx;
+  }
+
+  .carrusel{
+    gap: 10px;
+  }
+
+  .div-scroll{
+    height: 100%;
+    margin-top: 50px;
+    
+  }
+
+  .carrusel-container{
+    width: 90%;
+    height: 200px;
+    padding: 0%;
+  }
+
+
+
+
+
+  .informacion-motor{
+       gap: 20px;
+        flex-direction: row;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+    
+  }
+  
+
+  .informacion-motor h1{
+    width: 30%;
+    text-align: start;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+
+  }
+
+
+  .informacion-motor2{
+    width: 56%;
+    font-size: medium;
+    text-align: start;
+  }
+
+  .Boton-pro{
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+    color: var(--verde-secundario);
+  }
+
+  .linea-orizontal {
+    width: 80%;
+    margin: 40px auto;
+  }
+
+  .div-infoMotor{
+    gap: 7%;
+    margin: 0%;
+    padding: 0px 0px 20px 0px;
+    height: 98vh;
+    flex-direction: unset;
+  }
+
+.div-info{
+  width: 100%;
+  margin-left: 20px;
+  margin-top: 0px;
+  
+}
+
+.div-info h1{
+  font-size: x-large;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.div-info p{
+  font-size: large;
+}
+
+
+
+
+ .Motores{
+  margin-top: 30px;
+ }
+
+
+ .c400, .s800H, .c770N, .s450H, .g-bat {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3% 0;
+    width: 100%;
+    gap: 0px;
+
+}
+  
+
+.s800H, .c884, .s450H {
+  gap: 0px;
+  flex-direction: row-reverse;}
+
+
+.puntos-lado{
+  width: 49%;
+  margin-left: 5%;
+  padding: 0px;
+  
+  
+}
+
+ .puntos-lado li{
+
+  width: 95%;
+  list-style: disc inside;
+  margin-top: 3%;
+  font-size: medium;
+
+ }
+
+ .puntos-lado h1{
+  font-size: xx-large;
+  margin-bottom: 10px;
+  margin-top: 0px;
+ }
+
+ .puntos-lado h2{
+  font-size: large;
+ }
+
+ .puntos-lado h3{
+  font-size: medium;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  width: 89%;
+    display: list-item;
+  list-style-type: disc;  /* Tipo de punto */
+  margin-left: 18px;   
+
+ }
+
+ .puntos-lado p li{
+  margin: 5px 0 10px 0;
+  width: 96%;
+  font-size: 13px;
+ }
+
+.Motores img{
+  display: block;
+  margin: 0% auto;
+  width: 40%;
+  height: 20%;
+  
+}
+
+ .Motores{
+  margin-top: 30px;
+ }
+
+
+ .linea-info{
+  width: 90%;
+  padding: 10px;
+  padding-left: 0%;
+  
+ }
+ .etiqueta{
+  width: 70%;
+  font-size: large;
+}
+
+ .valor{
+  width: 100%;
+  font-size: large;
+  
+ } 
+
+ .Boton{
+  margin-top: 0px;
+  transform: scale(1);
+
+ }
+  .escondido {
+    display: none;
+  }
+
+
+.menu-toggle{
+  display: none;
+}
+
+}

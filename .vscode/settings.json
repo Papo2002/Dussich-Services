@@ -1,0 +1,9 @@
+{
+    "liveServer.settings.port": 5501,
+    "files.associations": {
+        "*.dbclient-js": "javascript",
+        ".fantomasignore": "ignore",
+        "iostream": "cpp",
+        "ostream": "cpp"
+    }
+}
