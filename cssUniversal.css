@@ -939,7 +939,7 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
     margin: 0%;
     width: 100%;
     padding: 0px 0px 20px 0px;
-    height: 98vh;
+    height: 0%;
     margin-left: 0px !important;
   }
 
@@ -974,6 +974,7 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
   list-style: disc inside;
   margin-top: 3%;
   font-size: medium;
+  padding: 0;
 
  }
 
@@ -993,6 +994,7 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
   margin: 5px 0 10px 0;
   width: 90%;
   font-size: small;
+  margin-left: 20px !important;
  }
 
  .Motores img{
@@ -1155,7 +1157,7 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
     margin: 0%;
     width: 100%;
     padding: 0px 0px 20px 0px;
-    height: 98vh;
+    height: 0%;
     margin-left: 0% !important;
   }
 
@@ -1179,7 +1181,7 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
 
 .puntos-lado{
   width: 100%;
-  margin-left: 30px;
+  margin-left: 20px;
   padding: 0px;
   
 }
@@ -1190,6 +1192,8 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
   list-style: disc inside;
   margin-top: 3%;
   font-size: medium;
+    padding: 0;
+
 
  }
 
