@@ -1,5 +1,3 @@
-// script.js
-
 // Menú desplegable tipo botón
 function toggleMenu(button) {
   const allMenus = document.querySelectorAll(".menu-items");
@@ -107,118 +105,111 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Menú lateral o de opciones
 function toggleMenuOpciones() {
-  document.querySelector(".div-opciones")?.classList.toggle("activo");
-}
-
-function toggleMenuOpciones() {
   document.querySelector('.div-opciones')?.classList.toggle('activo');
 }
 
+const carruselScroll = document.getElementById('carrusel');
+const btnIzquierda = document.getElementById('btnIzquierda');
+const btnDerecha = document.getElementById('btnDerecha');
 
+btnIzquierda?.addEventListener('click', () => {
+  carruselScroll.scrollBy({left: -300, behavior: 'smooth'});
+});
 
-  const carrusel = document.getElementById('carrusel');
-  const btnIzquierda = document.getElementById('btnIzquierda');
-  const btnDerecha = document.getElementById('btnDerecha');
+btnDerecha?.addEventListener('click', () => {
+  carruselScroll.scrollBy({left: 300, behavior: 'smooth'});
+});
 
-  btnIzquierda.addEventListener('click', () => {
-    carrusel.scrollBy({left: -300, behavior: 'smooth'});
+// Modal elements
+const modal = document.getElementById('modal');
+const modalImagen = document.getElementById('modalImagen');
+const modalCerrar = document.getElementById('modalCerrar');
+const modalIzquierda = document.getElementById('modalIzquierda');
+const modalDerecha = document.getElementById('modalDerecha');
+
+const imagenes = Array.from(document.querySelectorAll('.imagen-carrusel'));
+let indiceActual = 0;
+
+function abrirModal(index) {
+  indiceActual = index;
+  modalImagen.src = imagenes[indiceActual].src;
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function cerrarModal() {
+  modal.classList.remove('active');
+  document.body.style.overflow = 'auto';
+}
+
+function mostrarSiguiente() {
+  indiceActual = (indiceActual + 1) % imagenes.length;
+  modalImagen.src = imagenes[indiceActual].src;
+}
+
+function mostrarAnterior() {
+  indiceActual = (indiceActual - 1 + imagenes.length) % imagenes.length;
+  modalImagen.src = imagenes[indiceActual].src;
+}
+
+// Click en imagenes para abrir modal
+imagenes.forEach(img => {
+  img.addEventListener('click', () => {
+    abrirModal(parseInt(img.dataset.index));
   });
+});
 
-  btnDerecha.addEventListener('click', () => {
-    carrusel.scrollBy({left: 300, behavior: 'smooth'});
+// Flechas modal
+modalIzquierda?.addEventListener('click', mostrarAnterior);
+modalDerecha?.addEventListener('click', mostrarSiguiente);
+
+// Cerrar modal con la X
+modalCerrar?.addEventListener('click', cerrarModal);
+
+// Cerrar modal clic fuera de imagen
+modal.addEventListener('click', (e) => {
+  if(e.target === modal) cerrarModal();
+});
+
+// Navegacion con teclado
+window.addEventListener('keydown', (e) => {
+  if(!modal.classList.contains('active')) return;
+  if(e.key === 'ArrowRight') mostrarSiguiente();
+  else if(e.key === 'ArrowLeft') mostrarAnterior();
+  else if(e.key === 'Escape') cerrarModal();
+});
+
+// ------------------- Botones de selección (Oleodinamica / Elettromeccanica / Hybrid) -------------------
+// Se adapta a cualquier número de botones con clase "boton-switch" y sección correspondiente
+
+document.querySelectorAll('.boton-switch').forEach(boton => {
+  boton.addEventListener('click', () => {
+    const targetId = boton.id.replace('btn-', 'info-'); // Ej: btn-oleo -> info-oleo
+    const targetDiv = document.getElementById(targetId);
+
+    if(!targetDiv) return;
+
+    // Ocultar todos los divs de info
+    document.querySelectorAll('[id^="info-"]').forEach(div => div.style.display = 'none');
+    targetDiv.style.display = 'block';
+
+    // Activar solo el botón seleccionado
+    document.querySelectorAll('.boton-switch').forEach(b => b.classList.remove('active'));
+    boton.classList.add('active');
   });
+});
 
-  // Modal elements
-  const modal = document.getElementById('modal');
-  const modalImagen = document.getElementById('modalImagen');
-  const modalCerrar = document.getElementById('modalCerrar');
-  const modalIzquierda = document.getElementById('modalIzquierda');
-  const modalDerecha = document.getElementById('modalDerecha');
 
-  const imagenes = Array.from(document.querySelectorAll('.imagen-carrusel'));
-  let indiceActual = 0;
+// ------------------- Ocultar div izquierdo al hacer scroll -------------------
+const divInfo = document.querySelector('.div-info');
+const contenedorScroll = document.querySelector('.contenedor-scroll');
 
-  function abrirModal(index) {
-    indiceActual = index;
-    modalImagen.src = imagenes[indiceActual].src;
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Evita scroll de fondo
-  }
-
-  function cerrarModal() {
-    modal.classList.remove('active');
-    document.body.style.overflow = 'auto';
-  }
-
-  function mostrarSiguiente() {
-    indiceActual = (indiceActual + 1) % imagenes.length;
-    modalImagen.src = imagenes[indiceActual].src;
-  }
-
-  function mostrarAnterior() {
-    indiceActual = (indiceActual - 1 + imagenes.length) % imagenes.length;
-    modalImagen.src = imagenes[indiceActual].src;
-  }
-
-  // Click en imagenes para abrir modal
-  imagenes.forEach(img => {
-    img.addEventListener('click', () => {
-      abrirModal(parseInt(img.dataset.index));
-    });
-  });
-
-  // Flechas modal
-  modalIzquierda.addEventListener('click', mostrarAnterior);
-  modalDerecha.addEventListener('click', mostrarSiguiente);
-
-  // Cerrar modal con la X
-  modalCerrar.addEventListener('click', cerrarModal);
-
-  // Cerrar modal clic fuera de imagen
-  modal.addEventListener('click', (e) => {
-    if(e.target === modal) cerrarModal();
-  });
-
-  // Navegacion con teclado (opcional)
-  window.addEventListener('keydown', (e) => {
-    if(!modal.classList.contains('active')) return;
-    if(e.key === 'ArrowRight') mostrarSiguiente();
-    else if(e.key === 'ArrowLeft') mostrarAnterior();
-    else if(e.key === 'Escape') cerrarModal();
-  });
-
-  const btnOleo = document.getElementById("btn-oleo");
-  const btnElettro = document.getElementById("btn-elettro");
-  const btnHybrid = document.getElementById("btn-hybrid");
-
-  const infoOleo = document.getElementById("info-oleo");
-  const infoElettro = document.getElementById("info-elettro");
-  const infoHybrid = document.getElementById("info-hybrid");
-
-  btnOleo.addEventListener("click", () => {
-    infoOleo.style.display = "block";
-    infoElettro.style.display = "none";
-    infoHybrid.style.display = "none";
-    btnOleo.classList.add("active");
-    btnElettro.classList.remove("active");
-    btnHybrid.classList.remove("active");
-  });
-
-  btnElettro.addEventListener("click", () => {
-    infoOleo.style.display = "none";
-    infoElettro.style.display = "block";
-    infoHybrid.style.display = "none";
-    btnElettro.classList.add("active");
-    btnOleo.classList.remove("active");
-    btnHybrid.classList.remove("active");
-  });
-
-  btnHybrid.addEventListener("click", () => {
-    infoOleo.style.display = "none";
-    infoElettro.style.display = "none";
-    infoHybrid.style.display = "block";
-    btnHybrid.classList.add("active");
-    btnOleo.classList.remove("active");
-    btnElettro.classList.remove("active");
-  });
-
+window.addEventListener('scroll', () => {
+    const contenedorBottom = contenedorScroll.getBoundingClientRect().bottom;
+    const topLimit = 50; // margen superior antes de ocultar
+    if(contenedorBottom < topLimit) {
+        divInfo.style.opacity = '0';
+    } else {
+        divInfo.style.opacity = '1';
+    }
+});

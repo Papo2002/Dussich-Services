@@ -15,10 +15,7 @@
 }
 
 
-.c400 img, .s800H img, .c770N img, .s450H img, .g-bat img{
-    width: 40% !important;
-  
-}
+
 
     .language-selector {
       position: relative;
@@ -83,9 +80,6 @@
   flex-direction: row-reverse;
 }
 
-.c884 img{
-    width: 40% !important;
-}
 
 
 img {
@@ -216,12 +210,15 @@ body {
   width: 75%;
   list-style: disc inside;
   margin-top: 3%;
+  padding-left: 3%;
 }
 
 
 .puntos-lado p {
   margin: 5px 0 10px 0;
-  width: 90%;
+  width: 80%;
+    padding-left: 6%;
+
 }
 
 
@@ -423,7 +420,7 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
   border-bottom: 1px solid #ccc;
   font-size: 18px;
   font-family: 'Poppins', sans-serif;
-  width: 75%;
+  width: 85%;
   padding: 20px;
 }
 
@@ -716,12 +713,10 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
 .div-infoMotor {
   display: flex;
   flex-direction: row;
-  padding: 40px 0% 40px 0%;
-  height: 80vh;
+  padding: 40px 0;
   width: 92%;
-  margin-top: 0%;
-  margin-left: 6.5% !important;
-  
+  margin: 0 auto; /* mejor que margin-left */
+  gap: 20px; /* espacio entre izquierda y derecha */
 }
 
 .div-info p{
@@ -747,6 +742,8 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
   top: 40px;
   align-self: flex-start;
   height: fit-content;
+  transition: opacity 0.3s ease; /* efecto de desaparición */
+  z-index: 2; /* para que esté encima si hace falta */
 }
 
 /* Parte derecha con scroll */
@@ -761,10 +758,25 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
   -ms-overflow-style: none;  /* IE 10+ */
 }
 
-.contenedor-scroll img {
-  width: 100% !important;
+.contenedor-scroll {
+  flex: 1 1 65%;
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 10px;
+  scroll-behavior: smooth;
+  overflow: auto; /* o scroll */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  
+  /* Sombra ligera a la derecha */
+  box-shadow: inset -10px 0 15px -10px rgba(0,0,0,0.2);
+  border-radius: 0 30px 30px 0;
 }
 
+/* ocultar scrollbar en Chrome/Edge/Safari */
+.contenedor-scroll::-webkit-scrollbar {
+  display: none;
+}
 /* Estilos de los detalles */
 .div-infoDetalles, .div-infoDetalles2 {
   background-color: #ffffff;
@@ -775,6 +787,20 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
   width: 80%;
   text-align: start;
   
+}
+@media screen and (max-width: 768px) {
+  .div-infoMotor {
+    flex-direction: column;
+  }
+  .div-info {
+    position: relative;
+    top: 0;
+    opacity: 1 !important;
+  }
+  .contenedor-scroll {
+    max-height: none;
+    overflow-y: visible;
+  }
 }
 
 

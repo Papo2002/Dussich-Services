@@ -1615,7 +1615,7 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
 
  .puntos-lado li{
 
-  width: 95%;
+  width: 85%;
   list-style: disc inside;
   margin-top: 3%;
   font-size: medium;
