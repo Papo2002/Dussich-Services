@@ -788,6 +788,11 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
   text-align: start;
   
 }
+
+.div-infoDetalles li, .div-infoDetalles2 li{
+  margin-top: 30px;
+}
+
 @media screen and (max-width: 768px) {
   .div-infoMotor {
     flex-direction: column;
