@@ -83,7 +83,7 @@
 
 
 img {
-  width: 35%;
+    width: 30%;  
   height: auto;
   object-fit: cover;
 }
@@ -1203,13 +1203,13 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
  }
 
  .puntos-lado h1{
-  font-size: x-large;
+  font-size: xx-large;
   margin-bottom: 10px;
   margin-top: 0px;
  }
 
  .puntos-lado h2{
-  font-size: medium;
+  font-size: x-large;
   margin-bottom: 20px;
   margin-top: 0px;
  }

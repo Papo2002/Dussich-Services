@@ -128,7 +128,7 @@ li a:hover {
     border-bottom: 1px solid #ccc;
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
-    width: 95%;
+    width: 100% !important;
     padding: 20px 20px;
     
 
@@ -587,7 +587,7 @@ li {
 
 .puntos-lado1 { padding: 0 0 0 0px; margin: 0; width: 45%; position: relative; }
 .puntos-lado1 li { list-style: disc inside; }
-.puntos-lado1 p { margin: 5px 0 10px 0; width: 90%; }
+.puntos-lado1 p { margin: 5px 0 10px 0; width: 90%; padding-left: 25px; }
 
 .div-opciones li { list-style: none; margin-top: 40px; word-wrap: break-word; }
 .dussichsecurity { color: rgb(244, 136, 0) !important; background-color: rgb(108, 26, 49); }
@@ -624,6 +624,11 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
 
 
 
+
+/* ========================= */
+/* Menú horizontal con logo centrado (corregido) */
+/* ========================= */
+
 .bloque-video-nav { width: 100%; }
 
 .video-background {
@@ -655,9 +660,7 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
   font-size: 260%;
 }
 
-/* ========================= */
-/* Menú horizontal con logo centrado (corregido) */
-/* ========================= */
+
 .menu-horizontal{
   position: relative;
   z-index: 2;
@@ -714,6 +717,44 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
 }
 
 
+
+
+
+@media (min-width: 1024px) {
+
+
+
+.menu-toggle {
+  display: none; 
+} 
+}
+
+@media (max-width: 1280px) and (min-width: 630px) {
+
+ .menu-left, .menu-right {
+  transform: scale(0.8);
+  font-size: 30px;
+} 
+
+.contenido{
+  font-size: xx-large;
+}
+
+.dussichsecurity{
+  white-space: nowrap;
+}
+
+.menu-toggle {
+  display: none; 
+} 
+
+.menu-right{
+  gap: 5px;
+
+}
+}
+
+/* ----------------------------------------------------------------------- */
 .divtitulo1{
   flex: 1; /* Que todos crezcan igual */
   padding: 20px;
@@ -788,6 +829,13 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
   transition: 0.3s;
 }
 
+.descripcion h1{
+  font-size: x-large !important;
+}
+
+.texto1{
+  font-size: xx-large !important;
+}
 
 @media (max-width: 360px) {  
  
@@ -1765,11 +1813,12 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
     width: 50%;
     gap: 0px;
     padding-right: 50px;
-    padding-left: 70px;
+    padding-left: 45px;
   }
 
   .puntos-lado1 p{
     font-size: large;
+    width: 95%;
   }
 
   .puntos-lado1 li{
