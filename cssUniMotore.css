@@ -190,6 +190,7 @@ width: 90%;
   
   /* Estilos opcionales para mejor visualización */
   height: 100px;
+  font-size: xx-large;
 }
 
 
@@ -586,7 +587,7 @@ li {
 }
 
 .puntos-lado1 { padding: 0 0 0 0px; margin: 0; width: 45%; position: relative; }
-.puntos-lado1 li { list-style: disc inside; }
+.puntos-lado1 li { list-style: disc inside; font-size: x-large !important;}
 .puntos-lado1 p { margin: 5px 0 10px 0; width: 90%; padding-left: 25px; }
 
 .div-opciones li { list-style: none; margin-top: 40px; word-wrap: break-word; }
@@ -829,13 +830,7 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
   transition: 0.3s;
 }
 
-.descripcion h1{
-  font-size: x-large !important;
-}
 
-.texto1{
-  font-size: xx-large !important;
-}
 
 @media (max-width: 360px) {  
  
@@ -1061,8 +1056,19 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
     padding: 0 0 0  30px;
   }
 
+
+  .puntos-lado1 p{
+    padding-left: 0px;
+  }
+
+  .puntos-lado1 li{
+    font-size: large !important;
+  }
+
+ 
+
  .linea-info1{
-  width: 90%;
+  width: 90% !important;
   padding: 10px;
   padding-left: 0%;
   
@@ -1234,6 +1240,10 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
     margin-bottom: 10px;
   }
 
+
+  .texto1{
+    font-size: x-large !important;
+  }
 }
 
 
@@ -1912,9 +1922,6 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
     margin-top: 3px;
   }
 
-  .manuale img {
-    width: 40%;
-  }
 
   .catalogo img{
     width: 33%;
