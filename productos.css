@@ -1419,7 +1419,7 @@ li a:hover {
   margin: auto;
   height: 750px;
   overflow: hidden;
-  background-image: url('FOTOS MENU/fondo.webp');
+  background-image: url('FOTOS_MENU/fondo.webp');
   flex-wrap: wrap;
   flex-direction: row;
   padding: 0px 0;
@@ -1742,7 +1742,7 @@ li a:hover {
   margin: auto;
   height: 750px;
   overflow: hidden;
-  background-image: url('FOTOS MENU/fondo.webp');
+  background-image: url('FOTOS_MENU/fondo.webp');
   flex-wrap: wrap;
   flex-direction: row;
   padding: 0px 0;
