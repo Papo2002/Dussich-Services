@@ -211,20 +211,24 @@ body {
   list-style: disc inside;
   margin-top: 3%;
   padding-left: 3%;
+  font-size: largeR;
 }
 
 
 .puntos-lado p {
-  margin: 5px 0 10px 0;
+  margin: 5px  0;
   width: 80%;
-    padding-left: 6%;
+    padding-left: 7%;
+    font-size: large;
+    margin-bottom: 20px;
+    
 
 }
 
 
 
 .div-opciones li { list-style: none; margin-top: 40px; word-wrap: break-word; }
-.dussichsecurity { color: rgb(244, 136, 0) !important; background-color: rgb(108, 26, 49); }
+.dussichServices { color: rgb(244, 136, 0) !important; background-color: rgb(108, 26, 49); }
 
 .div-opciones li a {
   text-decoration: none;
@@ -375,7 +379,7 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
   font-size: xx-large;
 }
 
-.dussichsecurity{
+.dussichServices{
   white-space: nowrap;
 }
 
@@ -860,7 +864,7 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
   font-size: xx-large;
 }
 
-.dussichsecurity{
+.dussichServices{
   white-space: nowrap;
 }
 
@@ -1416,12 +1420,18 @@ border-radius: 60px;
 
   .div-infoDetalles, .div-infoDetalles2 {
     width: 95% !important;
+    padding: 0px 0px 0px 20px;
   }
+
+    .div-infoDetalles img, .div-infoDetalles2 img{
+
+      width: 100% !important;
+    }
 
 
 .div-info{
   width: 92.3%;
-  margin-left: 20px;
+  margin-left: 25px;
   margin-top: 0px;
   
 }
@@ -1450,8 +1460,12 @@ border-radius: 60px;
   list-style: disc inside;
   margin-top: 3%;
   font-size: medium;
+  padding: 0px;
 
+  
  }
+
+ 
 
  .puntos-lado h1{
   font-size: x-large;
@@ -1469,7 +1483,10 @@ border-radius: 60px;
   margin: 5px 0 10px 0;
   width: 90%;
   font-size: small;
+
+  padding-left: 25px;
  }
+
 
  .Motores img{
   display: none;
@@ -2376,12 +2393,16 @@ border-radius: 60px;
   .div-infoDetalles h1 p, .div-infoDetalles2 h1 p {
     font-size: medium;}
 
+    .div-infoDetalles img, .div-infoDetalles2 img{
+
+      width: 100% !important;
+    }
 
 
 
 .div-info{
-  width: 92.3%;
-  margin-left: 20px;
+  width: 90%;
+  margin-left: 35px;
   margin-top: 0px;
   
 }

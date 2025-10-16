@@ -79,7 +79,7 @@ body {
     }
 
 
-.dussichsecurity {
+.dussichServices {
   color: rgb(244, 136, 0) !important;
   background-color: rgb(108, 26, 49);
 }
@@ -587,11 +587,12 @@ li {
 }
 
 .puntos-lado1 { padding: 0 0 0 0px; margin: 0; width: 45%; position: relative; }
-.puntos-lado1 li { list-style: disc inside; font-size: x-large !important;}
-.puntos-lado1 p { margin: 5px 0 10px 0; width: 90%; padding-left: 25px; }
+.puntos-lado1 li { list-style: disc inside; font-size: larger !important;}
+.puntos-lado1 p { margin: 5px 0 10px 0; width: 90%; padding-left: 15px;   margin-bottom: 20px;
+}
 
 .div-opciones li { list-style: none; margin-top: 40px; word-wrap: break-word; }
-.dussichsecurity { color: rgb(244, 136, 0) !important; background-color: rgb(108, 26, 49); }
+.dussichServices { color: rgb(244, 136, 0) !important; background-color: rgb(108, 26, 49); }
 
 .div-opciones li a {
   text-decoration: none;
@@ -741,7 +742,7 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
   font-size: xx-large;
 }
 
-.dussichsecurity{
+.dussichServices{
   white-space: nowrap;
 }
 
@@ -1290,7 +1291,13 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
   width: 100%;
 }
   
+
   
+ .puntos-lado1  p{
+
+  padding-left: 0%;
+ }
+
   .puntos-lado1{
     width: 90%;
     gap: 0px;
@@ -1344,6 +1351,10 @@ li a:hover { background-color: var(--verde-secundario); color: #fff; }
 
  .descripcion img{
   width: 60%;
+ }
+
+ .info1{
+  padding-left: 20px !important;
  }
 
  .info0 p, .info0 h1{

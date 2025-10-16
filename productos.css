@@ -281,7 +281,7 @@ body {
 .puntos-lado1 p { margin: 5px 0 10px 0; width: 90%; }
 
 .div-opciones li { list-style: none; margin-top: 40px; word-wrap: break-word; }
-.dussichsecurity { color: rgb(244, 136, 0) !important; background-color: rgb(108, 26, 49); }
+.dussichServices { color: rgb(244, 136, 0) !important; background-color: rgb(108, 26, 49); }
 
 .div-opciones li a {
   text-decoration: none;
@@ -434,7 +434,7 @@ p.parrafo { margin-bottom: 20px; font-size: 200%; font-weight: 200; margin-top: 
   font-size: xx-large;
 }
 
-.dussichsecurity{
+.dussichServices{
   white-space: nowrap;
 }
 
@@ -1209,7 +1209,7 @@ p.parrafo { margin-bottom: 20px; font-size: 200%; font-weight: 200; margin-top: 
   
 
 
-.dussichsecurity {
+.dussichServices {
   color: rgb(244, 136, 0) !important;
   background-color: rgb(108, 26, 49);
 }
@@ -1532,7 +1532,7 @@ li a:hover {
   
 
 
-.dussichsecurity {
+.dussichServices {
   color: rgb(244, 136, 0) !important;
   background-color: rgb(108, 26, 49);
 }
@@ -1830,5 +1830,36 @@ li a:hover {
 .flecha.derecha {
   right: 10px;
 }
+
+}
+
+@media (min-width: 647px) and (max-width: 926px) and (orientation: portrait) {
+  
+.productos{
+  gap: 30px;
+}
+  
+ .etiqueta{
+  width: 100%;
+}
+
+
+  .Aetiqueta, .Aetiqueta1{
+    flex: 0 1 35%;
+    width: 100%;
+  }
+  
+  .titulo1{
+  font-size: large;  
+    font-weight: bold;
+    color: #2e7d32;
+
+}
+
+  .Aetiqueta p, .Aetiqueta1 p{
+    font-size: small;
+  }
+ 
+  
 
 }

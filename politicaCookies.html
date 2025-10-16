@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Política de Privacidad y Cookies</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333333;
+      background-color: #ffffff;
+      margin: 20px;
+      max-width: 800px;
+    }
+    h1, h2 {
+      color: #222222;
+    }
+    a {
+      color: #0066cc;
+    }
+    .cookie-consent {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.8);
+      color: white;
+      padding: 15px;
+      text-align: center;
+      z-index: 1000;
+    }
+    .cookie-consent button {
+      background: #0066cc;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      margin-left: 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Política de Privacidad y Cookies</h1>
+
+  <p>En <strong>Dussich Services</strong> (“nosotros”, “nuestro”, “la empresa”) valoramos la privacidad de nuestros visitantes y usuarios, y nos comprometemos a protegerla mediante el cumplimiento de este aviso.</p>
+
+  <h2>1. Datos que recopilamos</h2>
+  <p>Cuando visitas nuestro sitio web o interactúas con él, podemos recopilar las siguientes categorías de datos:</p>
+  <ul>
+    <li>Datos técnicos: dirección IP, tipo de navegador, sistema operativo, datos de uso del sitio.</li>
+    <li>Datos de interacción: páginas visitadas, clics, duración de la sesión.</li>
+    <li>Datos voluntarios: nombre, correo electrónico, empresa, cuando usas formularios de contacto.</li>
+  </ul>
+
+  <h2>2. Uso de los datos</h2>
+  <p>Utilizamos los datos recopilados para los siguientes fines:</p>
+  <ul>
+    <li>Mejorar la experiencia del usuario en el sitio.</li>
+    <li>Analizar el tráfico web y comportamiento (por ejemplo, con Google Analytics).</li>
+    <li>Responder consultas hechas mediante formularios.</li>
+    <li>Enviar información sobre nuestros productos o Services , si el usuario lo autoriza.</li>
+  </ul>
+
+  <h2>3. Cookies y tecnologías similares</h2>
+  <p>Este sitio utiliza <strong>cookies</strong> y tecnologías similares para analizar patrones de tráfico. Las cookies pueden ser:</p>
+  <ul>
+    <li><strong>Cookies esenciales:</strong> necesarias para el funcionamiento del sitio.</li>
+    <li><strong>Cookies de análisis:</strong> para recopilar información sobre el uso del sitio (por ejemplo, Google Analytics).</li>
+    <li><strong>Cookies funcionales o de terceros:</strong> de Services  externos que embebes (por ejemplo, mapas, videos).</li>
+  </ul>
+  <p>Puedes permitir o rechazar cookies mediante un aviso que mostramos cuando entras al sitio.</p>
+
+  <h2>4. Compartir datos con terceros</h2>
+  <p>No vendemos ni compartimos tus datos personales con terceros para fines comerciales sin tu consentimiento. Podemos compartir datos con proveedores de Services  que nos ayudan a operar el sitio (por ejemplo, alojamiento, análisis), siempre con obligaciones de confidencialidad.</p>
+
+  <h2>5. Derechos del usuario</h2>
+  <p>Tienes los derechos de:</p>
+  <ul>
+    <li>Solicitar acceso a los datos que tenemos.</li>
+    <li>Solicitar su rectificación o eliminación.</li>
+    <li>Oponerte o limitar ciertos usos de los datos.</li>
+    <li>Retirar tu consentimiento en cualquier momento, sin afectar el uso previo de los datos.</li>
+  </ul>
+  <p>Para ejercer estos derechos, contáctanos al correo: <strong>vittoriodussich@gmail.com</strong></p>
+
+  <h2>6. Seguridad y retención de datos</h2>
+  <p>Implementamos medidas técnicas y organizativas razonables para proteger tus datos. Conservamos los datos solo durante el tiempo necesario para los fines para los que se recogen o para cumplir obligaciones legales.</p>
+
+  <h2>7. Cambios en esta política</h2>
+  <p>Podemos actualizar esta política periódicamente. Te informaremos de cambios sustanciales mediante un aviso visible en el sitio o por otros medios adecuados.</p>
+
+  <p><em>Fecha de vigencia: 6 de octubre de 2025</em></p>
+
+  <hr>
+
+  <h2>Aviso de Cookies</h2>
+  <div class="cookie-consent" id="cookieConsentBanner">
+    <span>Este sitio usa cookies para mejorar tu experiencia y analizar el tráfico. ¿Aceptas el uso de cookies?</span>
+    <button onclick="acceptCookies()">Aceptar</button>
+    <button onclick="declineCookies()">Rechazar</button>
+  </div>
+
+  <script>
+    function acceptCookies() {
+      document.getElementById('cookieConsentBanner').style.display = 'none';
+      localStorage.setItem('cookiesAllowed', 'yes');
+      // Aquí podrías activar el script de Analytics si lo tienes bloqueado hasta aceptación
+    }
+    function declineCookies() {
+      document.getElementById('cookieConsentBanner').style.display = 'none';
+      localStorage.setItem('cookiesAllowed', 'no');
+      // Aquí impides la carga de scripts de análisis
+    }
+    window.onload = function() {
+      let consent = localStorage.getItem('cookiesAllowed');
+      if (consent === 'yes' || consent === 'no') {
+        document.getElementById('cookieConsentBanner').style.display = 'none';
+      }
+    };
+  </script>
+
+</body>
+</html>
