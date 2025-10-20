@@ -12,12 +12,16 @@
 
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-35WFDXZMFV"></script>
+  
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-35WFDXZMFV');
   </script>
+
+
+
 </head>
 <body>
  <a href="https://wa.me/18092846954" class="float-btn whatsapp" target="_blank">
@@ -63,7 +67,31 @@
   <ul class="menu-right">
     <li><a href="contactos.html"><strong>Contactos</strong></a></li>
     <li><a href="#"><strong>Descargas</strong></a></li>
-    <li><a href="#" class="dussichServices"><strong>Dussich Services</strong></a></li>
+    <li><a href="#" class="dussichServices"><strong>Dussich Security</strong></a></li>
+    
+        <div class="language-selector">
+          <div class="selected" id="selectedLang">
+              <img src="https://flagcdn.com/w40/es.png" alt="Español">
+              <span>Español</span>
+            </div>
+        
+          <div class="dropdown" id="dropdown">
+              <div onclick="changeLanguage('es')">
+                <img src="https://flagcdn.com/w40/es.png" alt="Español">
+                <span>Español</span>
+              </div>
+
+              <div onclick="changeLanguage('fr')">
+                <img src="https://flagcdn.com/w40/fr.png" alt="Français">
+                <span>Français</span>
+              </div>
+              
+              <div onclick="changeLanguage('en')">
+                <img src="https://flagcdn.com/w40/gb.png" alt="English">
+                <span>English</span>
+              </div>
+          </div>
+        </div>
   </ul>
 </nav>
 
@@ -98,7 +126,9 @@
         </li>
     <li><a href="contactos.html"><strong>Contactos</strong></a></li>
         <li><strong><a href="#">Descargas</a></strong></li>
-        <li><strong><a class="dussichServices" href="#">Dussich Services</a></strong></li>
+        <li><strong><a class="dussichServices" href="#">Dussich Security</a></strong></li>
+
+        
       </ul>
     </div>
 
@@ -249,6 +279,51 @@
         ¡Nuestra experiencia para controlar tu acceso!
     </div>
 </div>
+
+
+<script>
+  const selected = document.getElementById('selectedLang');
+  const dropdown = document.getElementById('dropdown');
+
+  selected.onclick = () => {
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+  };
+
+  function changeLanguage(lang) {
+    // Detecta desde dónde se está ejecutando
+    const currentPath = window.location.pathname;
+
+    if (lang === 'es') {
+      // Ir a la raíz (español principal)
+      window.location.href = currentPath.includes('/fr/') || currentPath.includes('/en/')
+        ? '../index.html'
+        : 'index.html';
+    }
+
+    if (lang === 'fr') {
+      // Ir a la carpeta francés
+      window.location.href = currentPath.includes('/fr/')
+        ? 'index.html'
+        : currentPath.includes('/en/')
+          ? '../fr/index.html'
+          : 'fr/index.html';
+    }
+
+    if (lang === 'en') {
+      // Ir a la carpeta inglés
+      window.location.href = currentPath.includes('/en/')
+        ? 'index.html'
+        : currentPath.includes('/fr/')
+          ? '../en/index.html'
+          : 'en/index.html';
+    }
+  }
+
+  // Cerrar el menú al hacer clic fuera
+  document.addEventListener('click', (e) => {
+    if (!selected.contains(e.target)) dropdown.style.display = 'none';
+  });
+</script>
 
 
 <script src="script.js"></script>
